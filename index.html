@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디자인바이지원, 이름걸고 하는 디자인</title>
+  <meta name="description" content="카페24 쇼핑몰 디자인 스킨 전문 - 디자인바이지원">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="/">design<span>by</span>jiwon</a>
+      </h1>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="/category/all/">디자인</a>
+        <a href="/order/">주문서</a>
+        <a href="/qna/">문의/답변</a>
+        <a href="/manual/">매뉴얼</a>
+        <a href="/guide/">이용안내</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="/member/login.html" class="btn-login">로그인</a>
+        <a href="/member/join.html" class="btn-signup">회원가입</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== PRODUCT SECTION ==================== -->
+  <main class="product-section">
+    <div class="product-container">
+      <section class="hero-slider" aria-label="대표 스킨 미리보기 슬라이더">
+        <div class="hero-slider-inner" id="heroSlider">
+          <a class="hero-slide active" href="demo/sage/index.html" data-index="0">
+            <img src="https://d-j.co.kr/web/product/small/202601/62346bddc7f6dab42a06d4cb44f43560.png" alt="S128.세이지 반응형 데모">
+          </a>
+          <a class="hero-slide" href="https://ecudemo386823.cafe24.com/" data-index="1">
+            <img src="https://d-j.co.kr/web/product/small/202601/06e1bdfca62b42ea83ccf57d7bf57508.png" alt="S127.오브젝티브 반응형 데모">
+          </a>
+          <a class="hero-slide" href="https://ecudemo386143.cafe24.com/" data-index="2">
+            <img src="https://d-j.co.kr/web/product/small/202512/7b2ebc0ed5746e2ce5f93ad4f385aefe.png" alt="S126.디에센셜 반응형 데모">
+          </a>
+          <a class="hero-slide" href="https://ecudemo384301.cafe24.com/" data-index="3">
+            <img src="https://d-j.co.kr/web/product/small/202601/80e1b5b7ab5bf70b85eb2501e11a4d6b.png" alt="S125.오버셀렉 반응형 데모">
+          </a>
+          <a class="hero-slide" href="https://ecudemo380521.cafe24.com/" data-index="4">
+            <img src="https://d-j.co.kr/web/product/small/202512/d535a526a36496fa3555d6ea0670eec0.png" alt="S124.오렐리 반응형 데모">
+          </a>
+
+          <button class="hero-nav prev" type="button" aria-label="이전 슬라이드">&lt;</button>
+          <button class="hero-nav next" type="button" aria-label="다음 슬라이드">&gt;</button>
+
+          <div class="hero-controls" id="heroDots">
+            <button class="hero-dot active" type="button" aria-label="슬라이드 1"></button>
+            <button class="hero-dot" type="button" aria-label="슬라이드 2"></button>
+            <button class="hero-dot" type="button" aria-label="슬라이드 3"></button>
+            <button class="hero-dot" type="button" aria-label="슬라이드 4"></button>
+            <button class="hero-dot" type="button" aria-label="슬라이드 5"></button>
+          </div>
+        </div>
+      </section>
+
+      <div class="product-grid">
+
+        <!-- Product 1: S128.세이지 -->
+        <div class="product-card" data-demo-url="demo/sage/index.html" aria-label="S128.세이지 반응형 데모 보기">
+          <a href="product/s128-detail.html">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202601/62346bddc7f6dab42a06d4cb44f43560.png" alt="S128.세이지 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="product/s128-detail.html">S128.세이지 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>220,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>285,000원</span>
+              </div>
+              <a href="demo/sage/index.html" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: S127.오브젝티브 -->
+        <div class="product-card" data-demo-url="https://ecudemo386823.cafe24.com/" aria-label="S127.오브젝티브 반응형 데모 보기">
+          <a href="https://ecudemo386823.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202601/06e1bdfca62b42ea83ccf57d7bf57508.png" alt="S127.오브젝티브 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo386823.cafe24.com/">S127.오브젝티브 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>250,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>330,000원</span>
+              </div>
+              <a href="https://ecudemo386823.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: S126.디에센셜 -->
+        <div class="product-card" data-demo-url="https://ecudemo386143.cafe24.com/" aria-label="S126.디에센셜 반응형 데모 보기">
+          <a href="https://ecudemo386143.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202512/7b2ebc0ed5746e2ce5f93ad4f385aefe.png" alt="S126.디에센셜 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo386143.cafe24.com/">S126.디에센셜 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>250,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>330,000원</span>
+              </div>
+              <a href="https://ecudemo386143.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: S125.오버셀렉 -->
+        <div class="product-card" data-demo-url="https://ecudemo384301.cafe24.com/" aria-label="S125.오버셀렉 반응형 데모 보기">
+          <a href="https://ecudemo384301.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202601/80e1b5b7ab5bf70b85eb2501e11a4d6b.png" alt="S125.오버셀렉 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo384301.cafe24.com/">S125.오버셀렉 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>200,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>260,000원</span>
+              </div>
+              <a href="https://ecudemo384301.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: S124.오렐리 -->
+        <div class="product-card" data-demo-url="https://ecudemo380521.cafe24.com/" aria-label="S124.오렐리 반응형 데모 보기">
+          <a href="https://ecudemo380521.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202512/d535a526a36496fa3555d6ea0670eec0.png" alt="S124.오렐리 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo380521.cafe24.com/">S124.오렐리 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>255,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>355,000원</span>
+              </div>
+              <a href="https://ecudemo380521.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: S123.시엔 -->
+        <div class="product-card" data-demo-url="https://ecudemo374174.cafe24.com/" aria-label="S123.시엔 반응형 데모 보기">
+          <a href="https://ecudemo374174.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202511/0295d0532fde5345fd2672bedc72b37a.png" alt="S123.시엔 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo374174.cafe24.com/">S123.시엔 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo374174.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: S122.피아제 -->
+        <div class="product-card" data-demo-url="https://ecudemo368419.cafe24.com/" aria-label="S122.피아제 반응형 데모 보기">
+          <a href="https://ecudemo368419.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202508/a7ac76a16a4fa66dc8d253e37f9451c1.png" alt="S122.피아제 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo368419.cafe24.com/">S122.피아제 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo368419.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: S121.모르타르 -->
+        <div class="product-card" data-demo-url="https://ecudemo361914.cafe24.com/" aria-label="S121.모르타르 반응형 데모 보기">
+          <a href="https://ecudemo361914.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202504/853dee1e38b56d2034dc56d92f081bff.png" alt="S121.모르타르 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo361914.cafe24.com/">S121.모르타르 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo361914.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: S120.에프터무드 -->
+        <div class="product-card" data-demo-url="https://ecudemo358811.cafe24.com/" aria-label="S120.에프터무드 반응형 데모 보기">
+          <a href="https://ecudemo358811.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202504/e1295de6246690e8631c3b5a21fead4a.png" alt="S120.에프터무드 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo358811.cafe24.com/">S120.에프터무드 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo358811.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: S119.톤 -->
+        <div class="product-card" data-demo-url="https://ecudemo357960.cafe24.com/" aria-label="S119.톤 반응형 데모 보기">
+          <a href="https://ecudemo357960.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202503/4bfb7e7e74930f8b3edde494a9478e37.png" alt="S119.톤 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo357960.cafe24.com/">S119.톤 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo357960.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 11: S118.미우 -->
+        <div class="product-card" data-demo-url="https://ecudemo352589.cafe24.com/" aria-label="S118.미우 반응형 데모 보기">
+          <a href="https://ecudemo352589.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202503/217c055d0a1205fa9ac54832164b020e.png" alt="S118.미우 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo352589.cafe24.com/">S118.미우 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>220,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>260,000원</span>
+              </div>
+              <a href="https://ecudemo352589.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12: S117.노마드 -->
+        <div class="product-card" data-demo-url="https://ecudemo352204.cafe24.com/" aria-label="S117.노마드 반응형 데모 보기">
+          <a href="https://ecudemo352204.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202503/fa0cd5a8d36ff840a4d540505189f5e8.png" alt="S117.노마드 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo352204.cafe24.com/">S117.노마드 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo352204.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 13: S116.로베 -->
+        <div class="product-card" data-demo-url="https://ecudemo347250.cafe24.com/" aria-label="S116.로베 반응형 데모 보기">
+          <a href="https://ecudemo347250.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202412/7a8d2fc023f4559f96151d001c7d58f0.png" alt="S116.로베 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo347250.cafe24.com/">S116.로베 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">250,000원</span>
+              </div>
+              <a href="https://ecudemo347250.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 14: S115.에이디 -->
+        <div class="product-card" data-demo-url="https://ecudemo331282.cafe24.com/" aria-label="S115.에이디 반응형 데모 보기">
+          <a href="https://ecudemo331282.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/9c9a7dabe635b11ecc6de15b4e4cca98.png" alt="S115.에이디 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo331282.cafe24.com/">S115.에이디 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo331282.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 15: S114.레이니 -->
+        <div class="product-card" data-demo-url="https://ecudemo331257.cafe24.com/" aria-label="S114.레이니 반응형 데모 보기">
+          <a href="https://ecudemo331257.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/9f9f5ab94029e9805a2c72733550b1ee.png" alt="S114.레이니 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo331257.cafe24.com/">S114.레이니 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo331257.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 16: S113.라우브 -->
+        <div class="product-card" data-demo-url="https://ecudemo330641.cafe24.com/" aria-label="S113.라우브 반응형 데모 보기">
+          <a href="https://ecudemo330641.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/1baa909813fe3eb1b1feb652673c0df5.png" alt="S113.라우브 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo330641.cafe24.com/">S113.라우브 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo330641.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 17: S112.레빗 -->
+        <div class="product-card" data-demo-url="https://ecudemo330667.cafe24.com/" aria-label="S112.레빗 반응형 데모 보기">
+          <a href="https://ecudemo330667.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202512/f31b2596ed49655120f2d1b2fcdc01c3.png" alt="S112.레빗 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo330667.cafe24.com/">S112.레빗 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>220,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>275,000원</span>
+              </div>
+              <a href="https://ecudemo330667.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 18: S111.제니 -->
+        <div class="product-card" data-demo-url="https://ecudemo330455.cafe24.com/" aria-label="S111.제니 반응형 데모 보기">
+          <a href="https://ecudemo330455.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/b5cceff5068f3a062fd1f35323d7e033.png" alt="S111.제니 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo330455.cafe24.com/">S111.제니 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy"><span class="label">복사형 : </span>220,000원</span>
+                <span class="price-setting"><span class="label">세팅형 : </span>275,000원</span>
+              </div>
+              <a href="https://ecudemo330455.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 19: S110.노바 -->
+        <div class="product-card" data-demo-url="https://ecudemo329736.cafe24.com/" aria-label="S110.노바 반응형 데모 보기">
+          <a href="https://ecudemo329736.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/50fb20bf81741e0a078807b6027e1cca.png" alt="S110.노바 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo329736.cafe24.com/">S110.노바 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo329736.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 20: S109.데이코스 -->
+        <div class="product-card" data-demo-url="https://ecudemo327632.cafe24.com/" aria-label="S109.데이코스 반응형 데모 보기">
+          <a href="https://ecudemo327632.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/218dcf7d6a0f849d021d2d71f9e5af62.png" alt="S109.데이코스 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo327632.cafe24.com/">S109.데이코스 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo327632.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 21: S107.디프 -->
+        <div class="product-card" data-demo-url="https://ecudemo325819.cafe24.com/" aria-label="S107.디프 반응형 데모 보기">
+          <a href="https://ecudemo325819.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/c83190193766ea92e9c03391dc2f1f86.png" alt="S107.디프 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo325819.cafe24.com/">S107.디프 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo325819.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 22: S104.시그니처 -->
+        <div class="product-card" data-demo-url="https://ecudemo322500.cafe24.com/" aria-label="S104.시그니처 반응형 데모 보기">
+          <a href="https://ecudemo322500.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/79a66c5698df5da358df8b074de379f7.png" alt="S104.시그니처 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo322500.cafe24.com/">S104.시그니처 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo322500.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 23: S103.엠마스튜디오 -->
+        <div class="product-card" data-demo-url="https://ecudemo321175.cafe24.com/" aria-label="S103.엠마스튜디오 반응형 데모 보기">
+          <a href="https://ecudemo321175.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/ad96f5bd795a1594cc9d05a1736139ad.png" alt="S103.엠마스튜디오 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo321175.cafe24.com/">S103.엠마스튜디오 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo321175.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 24: S102.샌더 -->
+        <div class="product-card" data-demo-url="https://ecudemo320524.cafe24.com/" aria-label="S102.샌더 반응형 데모 보기">
+          <a href="https://ecudemo320524.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/cfab2d46d728bc535cd79971bd384618.png" alt="S102.샌더 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo320524.cafe24.com/">S102.샌더 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo320524.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 25: S101.로카2 -->
+        <div class="product-card" data-demo-url="https://ecudemo320243.cafe24.com/" aria-label="S101.로카2 반응형 데모 보기">
+          <a href="https://ecudemo320243.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/7fcf592b1f81bf8443b0583d2777a992.png" alt="S101.로카2 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo320243.cafe24.com/">S101.로카2 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo320243.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 26: S100.로카 -->
+        <div class="product-card" data-demo-url="https://ecudemo315388.cafe24.com/" aria-label="S100.로카 반응형 데모 보기">
+          <a href="https://ecudemo315388.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/accbd194c9a35804d596d880dafeed7e.png" alt="S100.로카 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo315388.cafe24.com/">S100.로카 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo315388.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 27: S99.키치 -->
+        <div class="product-card" data-demo-url="http://ecudemo288340.cafe24.com/" aria-label="S99.키치 반응형 데모 보기">
+          <a href="http://ecudemo288340.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/a25443e275407c5c11b8285b443510b4.png" alt="S99.키치 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="http://ecudemo288340.cafe24.com/">S99.키치 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="http://ecudemo288340.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 28: S96.모모 -->
+        <div class="product-card" data-demo-url="https://ecudemo283192.cafe24.com/" aria-label="S96.모모 반응형 데모 보기">
+          <a href="https://ecudemo283192.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/5c3e2ad366f98a662217fb344db3a8e3.png" alt="S96.모모 반응형 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="https://ecudemo283192.cafe24.com/">S96.모모 반응형</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">275,000원</span>
+              </div>
+              <a href="https://ecudemo283192.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 29: S91.블랑 -->
+        <div class="product-card" data-demo-url="http://ecudemo168049.cafe24.com/" aria-label="S91.블랑 모바일무료 데모 보기">
+          <a href="http://ecudemo168049.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/90a591036fa63d6a6b6095166a04aeb0.png" alt="S91.블랑 모바일무료 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="http://ecudemo168049.cafe24.com/">S91.블랑 모바일무료</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">230,000원</span>
+              </div>
+              <a href="http://ecudemo168049.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 30: S88.무무 -->
+        <div class="product-card" data-demo-url="http://ecudemo139761.cafe24.com/" aria-label="S88.무무 모바일무료 데모 보기">
+          <a href="http://ecudemo139761.cafe24.com/">
+            <div class="product-thumb">
+              <img src="https://d-j.co.kr/web/product/small/202406/05dce7df8eb4da145d8208ba4ea1eff9.png" alt="S88.무무 모바일무료 미리보기" loading="lazy">
+            </div>
+          </a>
+          <div class="product-info">
+            <h3 class="product-name"><a href="http://ecudemo139761.cafe24.com/">S88.무무 모바일무료</a></h3>
+            <div class="product-price-wrap">
+              <div class="product-prices">
+                <span class="price-copy">230,000원</span>
+              </div>
+              <a href="http://ecudemo139761.cafe24.com/" class="btn-preview" target="_blank" rel="noopener">스킨미리보기</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="prev">&lt;</a>
+        <span class="active">1</span>
+        <a href="#" class="next">&gt;</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-contact">
+          <h3>전화 상담 안내</h3>
+          <p class="phone">010.4507.5845</p>
+          <p class="hours">
+            오전 10시 - 오후 5시 (토,일,공휴일은 휴무)<br>
+            점심시간 오후 12:30 - 오후 1:30
+          </p>
+          <p class="notice">
+            * 정확한 상담을 위해 카톡/문자 문의는 받지 않습니다.<br>
+            이외 시간은 게시판을 이용 바랍니다.
+          </p>
+
+          <div class="footer-bank">
+            <h3>입금계좌 정보</h3>
+            <p>국민은행 626401-01-387961&nbsp; 디자인바이지원</p>
+          </div>
+        </div>
+
+        <div class="footer-business">
+          <p>
+            상호 : 디자인바이지원&nbsp;&nbsp;대표 : 박지원<br>
+            사업자 등록번호 안내 : [108-15-48506]<br>
+            통신판매업 신고 : 2013-경기안산-0196
+            <a href="https://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2013393028730200197&searchKey=04&searchVal=1081548506" target="_blank" rel="noopener">[사업자정보확인]</a><br>
+            개인정보관리책임자 : <a href="mailto:designjiwon@naver.com">박지원 (designjiwon@naver.com)</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="/product/list.html">디자인 스킨</a>
+        <a href="/order/">주문서 작성</a>
+        <a href="/qna/">수정/구매 문의</a>
+        <a href="/manual/">매뉴얼</a>
+        <a href="https://d.cafe24.com/designer/designer_product?agencyId=designjiwon1">디자인센터</a>
+        <a href="https://eclogin.cafe24.com/Shop/">관리자 로그인</a>
+        <a href="/member/privacy.html">개인정보 처리방침</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span style="font-weight:700; font-size:14px; color:#555; font-family:'Poppins',sans-serif;">cafe24</span>
+        <span class="escrow-text">안전거래를 위해 결제시 PG에스크로 구매안전서비스를 이용하실 수 있습니다.</span>
+        <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAdesiab2" class="btn-escrow" target="_blank" rel="noopener">서비스 가입사실 확인</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JavaScript ==================== -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        // Animate hamburger
+        this.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
+    }
+
+    // Product card interactions (click card to open demo)
+    const productCards = document.querySelectorAll('.product-card[data-demo-url]');
+    productCards.forEach((card) => {
+      card.setAttribute('role', 'link');
+      card.setAttribute('tabindex', '0');
+
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        const url = card.dataset.demoUrl;
+        if (url) {
+          const win = window.open(url, '_blank');
+          if (win) win.opener = null;
+        }
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const url = card.dataset.demoUrl;
+          if (url) {
+            const win = window.open(url, '_blank');
+            if (win) win.opener = null;
+          }
+        }
+      });
+    });
+
+    // Hero slider (auto + manual)
+    const heroSlider = document.getElementById('heroSlider');
+    if (heroSlider) {
+      const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
+      const dots = Array.from(document.querySelectorAll('#heroDots .hero-dot'));
+      const prevBtn = heroSlider.querySelector('.hero-nav.prev');
+      const nextBtn = heroSlider.querySelector('.hero-nav.next');
+      let currentIndex = 0;
+      let timerId = null;
+
+      const showSlide = (index) => {
+        const total = slides.length;
+        currentIndex = (index + total) % total;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === currentIndex);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      };
+
+      const startAuto = () => {
+        stopAuto();
+        timerId = setInterval(() => {
+          showSlide(currentIndex + 1);
+        }, 3800);
+      };
+
+      const stopAuto = () => {
+        if (timerId) clearInterval(timerId);
+        timerId = null;
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          showSlide(currentIndex - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          showSlide(currentIndex + 1);
+        });
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      let touchStartX = 0;
+      let touchDeltaX = 0;
+      const swipeThreshold = 50;
+
+      heroSlider.addEventListener('mouseenter', stopAuto);
+      heroSlider.addEventListener('mouseleave', startAuto);
+      heroSlider.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchDeltaX = 0;
+        stopAuto();
+      }, { passive: true });
+
+      heroSlider.addEventListener('touchmove', (e) => {
+        touchDeltaX = e.touches[0].clientX - touchStartX;
+      }, { passive: true });
+
+      heroSlider.addEventListener('touchend', () => {
+        if (Math.abs(touchDeltaX) > swipeThreshold) {
+          if (touchDeltaX > 0) {
+            showSlide(currentIndex - 1);
+          } else {
+            showSlide(currentIndex + 1);
+          }
+        }
+        startAuto();
+      });
+      startAuto();
+    }
+  </script>
+
+</body>
+</html>

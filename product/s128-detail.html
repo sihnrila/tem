@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S128.세이지 반응형 | 디자인바이지원</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">designbyjiwon</div>
+      <nav class="nav">
+        <a href="../index.html">디자인</a>
+        <a href="#">주문서</a>
+        <a href="#">문의/답변</a>
+        <a href="#">매뉴얼</a>
+        <a href="#">이용안내</a>
+      </nav>
+      <div class="header-right">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-wrap">
+    <div class="container detail-layout">
+      <section class="detail-left">
+        <img
+          class="detail-left-image"
+          src="file:///Users/boin/.cursor/projects/Users-boin-Desktop-24/assets/FireShot_Capture_010_-____________________________________________-__d-j.co.kr_-b7261f96-29da-4e81-ae66-2e5d2ecf6861.png"
+          alt="상세페이지 레이아웃 이미지"
+        >
+      </section>
+
+      <aside class="detail-right">
+        <div class="order-panel">
+          <div class="order-title">S128.세이지 반응형</div>
+          <div class="order-price">
+            <div class="price-line"><span class="label">복사형</span><span id="salePrice">250,000원</span></div>
+            <div class="price-line"><span class="label">세팅형</span><span>285,000원</span></div>
+          </div>
+          <div class="order-actions">
+            <a class="btn" href="../demo/sage/index.html" target="_blank" rel="noopener">스킨미리보기</a>
+            <button class="btn primary" type="button" id="btnOrder">디자인 결제</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h4>전화 상담 안내</h4>
+          <div>010.4507.5845</div>
+          <div>오전 10시 - 오후 5시 (토,일,공휴일은 휴무)</div>
+          <div>점심시간 오후 12:30 - 오후 1:30</div>
+          <div>* 정확한 상담을 위해 카톡/문자 문의는 받지 않습니다. 이외 시간은 게시판을 이용 바랍니다.</div>
+        </div>
+        <div>
+          <h4>입금계좌 정보</h4>
+          <div>국민은행 626401-01-387961 디자인바이지원</div>
+          <div>상호 : 디자인바이지원 대표 : 박지원</div>
+          <div>사업자 등록번호 안내 : [108-15-48506]</div>
+          <div>통신판매업 신고 : 2013-경기안산-0196 [사업자정보확인]</div>
+          <div>개인정보관리책임자 : 박지원 (designjiwon@naver.com)</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">디자인 스킨</a>
+        <a href="#">주문서 작성</a>
+        <a href="#">수정/구매 문의</a>
+        <a href="#">매뉴얼</a>
+        <a href="#">디자인센터</a>
+        <a href="#">관리자 로그인</a>
+        <a href="#">개인정보 처리방침</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const unitPrice = 250000;
+    const salePrice = document.getElementById('salePrice');
+
+    const formatCurrency = (value) => value.toLocaleString('ko-KR') + '원';
+
+    if (salePrice) salePrice.textContent = formatCurrency(unitPrice);
+  </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😊 Sage - 세이지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-notice" id="topNotice">
+    <div class="notice-inner">
+      <span>Sage Notice · 텍스트 팝업이 함께 제공됩니다. 리뷰를 작성해 주시면 이미지 롤링형으로 업그레이드 됩니다.</span>
+      <a href="#" class="notice-link">GO SHOP</a>
+      <button class="notice-close" type="button" id="noticeClose">닫기</button>
+    </div>
+  </div>
+
+  <div class="top-banners">
+    <span>SIGN UP & GET 5% OFF</span>
+    <span>FREE SHIPPING EVENT</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="모바일 메뉴 열기">☰</button>
+      <nav class="menu-left">
+        <a href="#" class="nav-link">About</a>
+        <div class="nav-item">
+          <a href="#" class="nav-link">Shop</a>
+          <div class="dropdown">
+            <a href="#">Best</a>
+            <a href="#">All</a>
+            <a href="#">Event</a>
+          </div>
+        </div>
+        <a href="#" class="nav-link">Archive</a>
+        <div class="nav-item">
+          <a href="#" class="nav-link">Community</a>
+          <div class="dropdown">
+            <a href="#">Notice</a>
+            <a href="#">Q&amp;A</a>
+            <a href="#">Review</a>
+            <a href="#">Archive</a>
+          </div>
+        </div>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+      <div class="logo">sage</div>
+      <nav class="menu-right">
+        <a href="#" class="nav-link">Shorts</a>
+        <a href="#" class="nav-link">Login</a>
+        <a href="#" class="nav-link">My Page</a>
+        <a href="#" class="nav-link">0</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+      <div class="logo">sage</div>
+      <button class="mobile-close" type="button" id="mobileClose">닫기</button>
+    </div>
+    <a href="#">About</a>
+    <button class="mobile-acc" type="button" data-target="mobileShop">Shop</button>
+    <div class="mobile-sub" id="mobileShop">
+      <a href="#">Best</a>
+      <a href="#">All</a>
+      <a href="#">Event</a>
+    </div>
+    <a href="#">Archive</a>
+    <button class="mobile-acc" type="button" data-target="mobileCommunity">Community</button>
+    <div class="mobile-sub" id="mobileCommunity">
+      <a href="#">Notice</a>
+      <a href="#">Q&amp;A</a>
+      <a href="#">Review</a>
+      <a href="#">Archive</a>
+    </div>
+    <a href="#">Contact</a>
+    <div class="mobile-divider"></div>
+    <a href="#">Shorts</a>
+    <a href="#">Login</a>
+    <a href="#">My Page</a>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active">
+          <img src="https://ecudemo387382.cafe24.com/file_data/ecudemo387382/2026/02/05/5530cd99b97f75a55979ae275bedbbb2.jpg" alt="Hero 1">
+          <div class="hero-text">
+            <p>LESS FORM, MORE INTENT</p>
+            <h1>A BLESSING OF WATER<br>FOR EVERY SKIN</h1>
+            <a href="#" class="btn">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/fdbbbda90b2296546bbe12d7e22f2b09.jpg" alt="Hero 2">
+          <div class="hero-text">
+            <p>NEW ARRIVAL 5%</p>
+            <h1>CLEAN BEAUTY<br>FOR EVERYONE</h1>
+            <a href="#" class="btn">VIEW ALL</a>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/baf89d1ce87988ca7a3f2a7876abde35.jpg" alt="Hero 3">
+          <div class="hero-text">
+            <p>ARCHIVE</p>
+            <h1>REFINED BEAUTY<br>MADE EASY</h1>
+            <a href="#" class="btn">READ MORE</a>
+          </div>
+        </div>
+
+        <button class="hero-nav prev" type="button" aria-label="이전 슬라이드">‹</button>
+        <button class="hero-nav next" type="button" aria-label="다음 슬라이드">›</button>
+        <div class="hero-dots" id="heroDots">
+          <button class="dot active" type="button" aria-label="슬라이드 1"></button>
+          <button class="dot" type="button" aria-label="슬라이드 2"></button>
+          <button class="dot" type="button" aria-label="슬라이드 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="rolling-banner">
+      <div class="rolling-track">
+        <span>Because Your Beauty Begins, Evolves 😊 And Returns Always to You ✨</span>
+        <span>Beauty That Begins With You -</span>
+        <span>Because Your Beauty Begins, Evolves 😊 And Returns Always to You ✨</span>
+        <span>Beauty That Begins With You -</span>
+      </div>
+    </div>
+
+    <section class="tiles">
+      <div class="tile-card">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/fdbbbda90b2296546bbe12d7e22f2b09.jpg" alt="Form">
+        <div class="tile-caption">Form · And ·</div>
+      </div>
+      <div class="tile-card">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/baf89d1ce87988ca7a3f2a7876abde35.jpg" alt="Best Product">
+        <div class="tile-caption">Best Product</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <span>Products</span>
+        <a class="btn-pill" href="#">VIEW ALL</a>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-name="Gel Mask Salt Care" data-price="28,350원" data-image="https://ecudemo387382.cafe24.com/web/product/medium/202601/8a146d9ed22df17be9128917d3c8f119.jpg" data-discount-start="2026-01-10" data-discount-end="2031-12-31" data-discount-amount="1,650원">
+          <img src="https://ecudemo387382.cafe24.com/web/product/medium/202601/8a146d9ed22df17be9128917d3c8f119.jpg" alt="Gel Mask">
+          <div class="product-name">Gel Mask Salt Care</div>
+          <div class="product-meta">Basic</div>
+          <div class="product-price">28,350원 <del>33,000원</del></div>
+          <div class="product-actions">
+            <button class="icon-btn" type="button">관심상품</button>
+            <button class="icon-btn" type="button">장바구니</button>
+            <button class="icon-btn quick-view" type="button">자세히</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Mineral Balance Skin" data-price="48,000원" data-image="https://ecudemo387382.cafe24.com/web/product/medium/202601/c9f125da989ccc9b3513355952819f45.jpg" data-discount-start="2026-01-10" data-discount-end="2031-12-31" data-discount-amount="3,000원">
+          <img src="https://ecudemo387382.cafe24.com/web/product/medium/202601/c9f125da989ccc9b3513355952819f45.jpg" alt="Mineral">
+          <div class="product-name">Mineral Balance Skin</div>
+          <div class="product-meta">Essential</div>
+          <div class="product-price">48,000원 <del>51,000원</del></div>
+          <div class="product-actions">
+            <button class="icon-btn" type="button">관심상품</button>
+            <button class="icon-btn" type="button">장바구니</button>
+            <button class="icon-btn quick-view" type="button">자세히</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Color Glow For Brightness" data-price="17,900원" data-image="https://ecudemo387382.cafe24.com/web/product/medium/202601/37d9711f245a3df89d47dc71e788ac36.jpg" data-discount-start="2026-01-10" data-discount-end="2031-12-31" data-discount-amount="1,100원">
+          <img src="https://ecudemo387382.cafe24.com/web/product/medium/202601/37d9711f245a3df89d47dc71e788ac36.jpg" alt="Pink Oil">
+          <div class="product-name">Color Glow For Brightness</div>
+          <div class="product-meta">Calming</div>
+          <div class="product-price">17,900원 <del>22,000원</del></div>
+          <div class="product-actions">
+            <button class="icon-btn" type="button">관심상품</button>
+            <button class="icon-btn" type="button">장바구니</button>
+            <button class="icon-btn quick-view" type="button">자세히</button>
+          </div>
+        </div>
+        <div class="product-card" data-name="Skin Renewal Cream" data-price="45,000원" data-image="https://ecudemo387382.cafe24.com/web/product/medium/202601/443fc19b6a016554c680e9a47e7cc296.jpg" data-discount-start="2026-01-10" data-discount-end="2031-12-31" data-discount-amount="3,000원">
+          <img src="https://ecudemo387382.cafe24.com/web/product/medium/202601/443fc19b6a016554c680e9a47e7cc296.jpg" alt="Cream">
+          <div class="product-name">Skin Renewal Cream</div>
+          <div class="product-meta">Daily</div>
+          <div class="product-price">45,000원 <del>48,000원</del></div>
+          <div class="product-actions">
+            <button class="icon-btn" type="button">관심상품</button>
+            <button class="icon-btn" type="button">장바구니</button>
+            <button class="icon-btn quick-view" type="button">자세히</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <span>Archive</span>
+        <a class="btn-pill" href="#">VIEW ALL</a>
+      </div>
+      <div class="archive-grid">
+        <div class="archive-card">
+          <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/decb9caa9e04439a2c752c7d02ea2c6a.jpg" alt="Clean Beauty">
+          <div class="archive-label">Clean Beauty, Easy Choice</div>
+        </div>
+        <div class="archive-card">
+          <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/09/5eb243e61be825b9ab09694c02d04512.jpg" alt="New Arrival">
+          <div class="archive-label">5% Off New Arrivals</div>
+        </div>
+        <div class="archive-card">
+          <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/eb99d547d4006c5283cf063c4fe8a5b3.png" alt="Refined Beauty">
+          <div class="archive-label">Refined Beauty, Made Easy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-card">
+        <h3>Stories from scientists,<br>innovators, and members like you.</h3>
+        <p>Every is different! Our makeup products comes in a range of colors so you can swipe right on your best match.</p>
+        <a class="btn" href="#">READ MORE</a>
+      </div>
+      <div class="story-image">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/11/ee3435c3d4cdb828e6c109c588c9b5aa.jpg" alt="Story">
+      </div>
+    </section>
+
+    <div class="shorts-title">Shorts Picks</div>
+    <div class="shorts-controls">
+      <button class="shorts-nav prev" type="button" id="shortsPrev">‹</button>
+      <button class="shorts-nav next" type="button" id="shortsNext">›</button>
+    </div>
+    <section class="shorts-track" id="shortsTrack">
+      <div class="shorts-card">
+        <img src="https://ecudemo387382.cafe24.com/file_data/ecudemo387382/2026/01/10/c61182fa2f5d0247e870443a7dac5bd5.jpg" alt="Shorts 1">
+        <div class="meta"><span class="play">▶</span> Beauty Routine</div>
+      </div>
+      <div class="shorts-card">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/09/5920081eba921ba9aa246f587de22d04.png" alt="Shorts 2">
+        <div class="meta"><span class="play">▶</span> Glow Moment</div>
+      </div>
+      <div class="shorts-card">
+        <img src="https://ecudemo387382.cafe24.com/file_data/ecudemo387382/2026/02/05/a0f9b8b2d4917c53e74dc7b58e885a4d.jpg" alt="Shorts 3">
+        <div class="meta"><span class="play">▶</span> Moisture Care</div>
+      </div>
+      <div class="shorts-card">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/a35f4e6d0347d7478a28a757da62ef95.png" alt="Shorts 4">
+        <div class="meta"><span class="play">▶</span> Fresh Look</div>
+      </div>
+      <div class="shorts-card">
+        <img src="https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/09/b8822b3b4215586a10a6420481d70cae.png" alt="Shorts 5">
+        <div class="meta"><span class="play">▶</span> Soft Glow</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">sage</div>
+        <div>Because Your Beauty Begins, Evolves</div>
+      </div>
+      <div>
+        <h4>ABOUT</h4>
+        <ul>
+          <li>Brand Story</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div>
+        <h4>LEGAL</h4>
+        <ul>
+          <li>Guide</li>
+          <li>Agreement</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+      <div>
+        <h4>SOCIAL</h4>
+        <ul>
+          <li>Instagram</li>
+          <li>Kakao</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="quickModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" type="button" id="modalClose">닫기</button>
+      <img id="modalImage" src="" alt="상품 이미지">
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-options">
+        <label for="modalOption">옵션 선택</label>
+        <select id="modalOption">
+          <option>Basic</option>
+          <option>Essential</option>
+          <option>Calming</option>
+          <option>Daily</option>
+        </select>
+      </div>
+      <div class="modal-discount">
+        <div>할인기간 <span id="discountPeriod"></span></div>
+        <div>할인금액 <span id="discountAmount"></span></div>
+      </div>
+      <div class="modal-countdown">남은시간 <span id="countdown"></span></div>
+      <button class="btn pill" type="button">장바구니 담기</button>
+    </div>
+  </div>
+
+  <script>
+    // notice
+    const noticeClose = document.getElementById('noticeClose');
+    const topNotice = document.getElementById('topNotice');
+    if (noticeClose && topNotice) {
+      noticeClose.addEventListener('click', () => {
+        topNotice.style.display = 'none';
+      });
+    }
+
+    // hero slider
+    const heroSlider = document.getElementById('heroSlider');
+    if (heroSlider) {
+      const slides = Array.from(heroSlider.querySelectorAll('.hero-slide'));
+      const dots = Array.from(document.querySelectorAll('#heroDots .dot'));
+      const prevBtn = heroSlider.querySelector('.hero-nav.prev');
+      const nextBtn = heroSlider.querySelector('.hero-nav.next');
+      let current = 0;
+      let timer;
+
+      const show = (idx) => {
+        current = (idx + slides.length) % slides.length;
+        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      };
+
+      const start = () => {
+        stop();
+        timer = setInterval(() => show(current + 1), 4500);
+      };
+
+      const stop = () => {
+        if (timer) clearInterval(timer);
+        timer = null;
+      };
+
+      prevBtn?.addEventListener('click', () => show(current - 1));
+      nextBtn?.addEventListener('click', () => show(current + 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+      heroSlider.addEventListener('mouseenter', stop);
+      heroSlider.addEventListener('mouseleave', start);
+      start();
+    }
+
+    // shorts auto scroll + nav
+    const shortsTrack = document.getElementById('shortsTrack');
+    const shortsPrev = document.getElementById('shortsPrev');
+    const shortsNext = document.getElementById('shortsNext');
+    if (shortsTrack) {
+      let dir = 1;
+      setInterval(() => {
+        shortsTrack.scrollLeft += 1 * dir;
+        if (shortsTrack.scrollLeft + shortsTrack.clientWidth >= shortsTrack.scrollWidth) dir = -1;
+        if (shortsTrack.scrollLeft <= 0) dir = 1;
+      }, 20);
+    }
+    shortsPrev?.addEventListener('click', () => {
+      shortsTrack.scrollBy({ left: -220, behavior: 'smooth' });
+    });
+    shortsNext?.addEventListener('click', () => {
+      shortsTrack.scrollBy({ left: 220, behavior: 'smooth' });
+    });
+
+    // mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        mobileOverlay?.classList.add('open');
+        document.body.classList.add('menu-open');
+      });
+    }
+    if (mobileClose && mobileMenu) {
+      mobileClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      });
+    }
+    mobileOverlay?.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    });
+    document.querySelectorAll('.mobile-acc').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.target;
+        const target = document.getElementById(id);
+        if (target) target.classList.toggle('open');
+      });
+    });
+
+    // quick view modal
+    const modal = document.getElementById('quickModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalImage = document.getElementById('modalImage');
+    const modalName = document.getElementById('modalName');
+    const modalPrice = document.getElementById('modalPrice');
+    const discountPeriod = document.getElementById('discountPeriod');
+    const discountAmount = document.getElementById('discountAmount');
+    const countdown = document.getElementById('countdown');
+    let countdownTimer = null;
+
+    const openModal = (card) => {
+      if (!modal) return;
+      modalImage.src = card.dataset.image;
+      modalName.textContent = card.dataset.name;
+      modalPrice.textContent = card.dataset.price;
+      discountPeriod.textContent = `${card.dataset.discountStart} ~ ${card.dataset.discountEnd}`;
+      discountAmount.textContent = card.dataset.discountAmount;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      startCountdown(card.dataset.discountEnd);
+    };
+
+    const closeModal = () => {
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      if (countdownTimer) clearInterval(countdownTimer);
+    };
+
+    const startCountdown = (endDate) => {
+      if (!countdown) return;
+      const end = new Date(`${endDate}T23:59:59`);
+      const tick = () => {
+        const now = new Date();
+        const diff = end - now;
+        if (diff <= 0) {
+          countdown.textContent = '00:00:00';
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+        countdown.textContent = `${days}일 ${String(hours).padStart(2,'0')}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+      };
+      tick();
+      if (countdownTimer) clearInterval(countdownTimer);
+      countdownTimer = setInterval(tick, 1000);
+    };
+
+    document.querySelectorAll('.quick-view').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.product-card');
+        if (card) openModal(card);
+      });
+    });
+    modalClose?.addEventListener('click', closeModal);
+    modalBackdrop?.addEventListener('click', closeModal);
+  </script>
+</body>
+</html>
