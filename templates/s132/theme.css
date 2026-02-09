@@ -1,0 +1,405 @@
+/* ==========================================================
+   S132 — Editorial Layout
+   Asymmetric grids: left-heavy text, right-heavy images.
+   Deliberate white space. Off-grid alignment on index/detail.
+   Split sections with editorial magazine feel.
+   ========================================================== */
+
+/* ---- Global editorial feel ---- */
+body {
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+}
+
+/* ---- Generous section spacing ---- */
+.section {
+  padding: 80px 0 !important;
+}
+.section.alt {
+  padding: 90px 0 !important;
+}
+.section-divider {
+  padding: 40px 0;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+}
+
+/* ---- Section titles: editorial style ---- */
+.section-title {
+  margin-bottom: 32px !important;
+  align-items: flex-start;
+}
+.section-title h2 {
+  font-size: 28px !important;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-weight: 400;
+}
+.section-title a {
+  margin-top: 6px;
+}
+.section-subtitle {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px !important;
+}
+.section-subtitle.emphasis {
+  font-size: 15px;
+  gap: 6px;
+}
+
+/* ---- Favorites: asymmetric left-heavy ---- */
+.favorites-wrap {
+  grid-template-columns: 1.4fr 1fr !important;
+  gap: 40px;
+}
+.favorites-left {
+  padding-right: 20px;
+}
+
+/* ---- Product grid: 3-column asymmetric ---- */
+.product-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+/* Make first card span wider (editorial hero card) */
+.product-grid .card:first-child {
+  grid-row: span 1;
+}
+.product-grid .card:first-child .image-box {
+  height: 320px;
+}
+
+/* ---- Cards: editorial clean ---- */
+.card {
+  border-radius: 0;
+}
+.card:hover {
+  transform: none;
+}
+.image-box {
+  border-radius: 0 !important;
+  height: 280px;
+}
+.card-body {
+  padding: 14px 0 0;
+}
+.card-body h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.brand {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  margin-top: 2px;
+}
+.price-stack {
+  margin-top: 4px;
+}
+
+/* ---- Lookbook: asymmetric layout ---- */
+.lookbook {
+  grid-template-columns: 1.6fr 1fr !important;
+  gap: 16px;
+}
+.lookbook-card {
+  border-radius: 0;
+}
+.lookbook-card:first-child {
+  grid-row: span 2;
+  height: auto;
+  min-height: 420px;
+}
+.lookbook-card:nth-child(2),
+.lookbook-card:nth-child(3) {
+  height: 200px;
+}
+.lookbook-text {
+  border-radius: 0;
+  background: transparent;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  left: 20px;
+  bottom: 20px;
+}
+
+/* ---- Story: editorial split ---- */
+.story {
+  grid-template-columns: 1.5fr 1fr !important;
+  gap: 60px;
+}
+.story h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.story p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.tagline {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+}
+.story .image-box {
+  border-radius: 0 !important;
+}
+
+/* ---- Hero: editorial with left-aligned content ---- */
+.hero-slider {
+  min-height: 90vh;
+}
+.hero-slide {
+  min-height: 90vh;
+}
+.hero-content {
+  padding: 0 6vw 12vh;
+}
+.hero-meta {
+  max-width: 480px;
+}
+.hero-card {
+  border-radius: 0;
+}
+.hero-card h1 {
+  font-size: 32px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.hero .btn {
+  border-radius: 0;
+  padding: 12px 24px;
+  letter-spacing: 0.25em;
+}
+
+/* ---- Reviews: single column editorial ---- */
+.reviews {
+  grid-template-columns: 1fr !important;
+  max-width: 640px;
+}
+.review-slider {
+  height: 260px;
+}
+.review-card {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.review-card h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.review-card p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ---- Offer: editorial split ---- */
+.offer {
+  border-radius: 0;
+  padding: 40px;
+  grid-template-columns: 1.3fr 1fr;
+}
+.offer h3 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+.offer p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.offer .image-box {
+  border-radius: 0;
+  height: 280px;
+}
+.offer .btn {
+  border-radius: 0;
+}
+
+/* ---- Offer grid: 3-column ---- */
+.offer-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ---- Instagram: asymmetric ---- */
+.instagram {
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 8px;
+}
+.instagram .image-box {
+  border-radius: 0;
+  height: 200px;
+}
+
+/* ---- Pills: editorial minimal ---- */
+.pill {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 6px 2px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+.pill.is-active {
+  background: transparent;
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+/* ---- Buttons: rectangular editorial ---- */
+.btn {
+  border-radius: 0;
+  padding: 12px 20px;
+  letter-spacing: 0.22em;
+}
+.badge {
+  border-radius: 0;
+}
+
+/* ---- Detail page: editorial grid ---- */
+.detail-grid {
+  grid-template-columns: 1.4fr 0.6fr !important;
+  gap: 50px;
+}
+.gallery {
+  grid-template-columns: 80px 1fr;
+}
+.thumb {
+  border-radius: 0;
+}
+.main-image {
+  border-radius: 0;
+}
+.main-image::after {
+  border-radius: 0;
+}
+.detail-info h1 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.detail-info p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.tabs {
+  letter-spacing: 0.22em;
+}
+.spec-item {
+  border-radius: 0;
+}
+.review-item {
+  border-radius: 0;
+}
+.actions .btn {
+  border-radius: 0;
+}
+.qty {
+  border-radius: 0;
+}
+
+/* ---- List page: editorial toolbar ---- */
+.section-title h1 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: none;
+}
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.toolbar {
+  justify-content: flex-start;
+  gap: 24px;
+}
+.sort span {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+/* ---- List cards: clean editorial ---- */
+.card {
+  border: 0;
+  border-radius: 0;
+}
+
+/* ---- Recommend: editorial ---- */
+.recommend h2 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.recommend-card {
+  border-radius: 0;
+}
+
+/* ---- Pagination: editorial ---- */
+.pagination a {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
+
+/* ---- Header: editorial minimal ---- */
+.header-wrap {
+  padding: 20px 0;
+}
+.logo {
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+}
+
+/* ---- Top areas ---- */
+.top-banner {
+  letter-spacing: 0.08em;
+}
+
+/* ---- Footer: editorial ---- */
+footer {
+  margin-top: 60px;
+}
+.footer-grid {
+  gap: 40px;
+}
+
+/* ---- Dropdown: editorial ---- */
+.dropdown {
+  border-radius: 0;
+}
+
+/* ---- Reorder: move lookbook above products on index ---- */
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > section:nth-of-type(3) { order: 2; }
+main > section:nth-of-type(2) { order: 3; }
+main > section:nth-of-type(9) { order: 8; }
+main > section:nth-of-type(8) { order: 9; }
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .lookbook { grid-template-columns: 1fr !important; }
+  .lookbook-card:first-child { min-height: 280px; grid-row: span 1; }
+  .favorites-wrap { grid-template-columns: 1fr !important; }
+  .story { grid-template-columns: 1fr !important; gap: 28px; }
+  .offer { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr !important; }
+  .offer-grid { grid-template-columns: repeat(2, 1fr); }
+  .instagram { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .section { padding: 48px 0 !important; }
+  .product-grid { grid-template-columns: 1fr !important; }
+  .product-grid .card:first-child .image-box { height: 260px; }
+}

@@ -1,0 +1,320 @@
+/* ==========================================================
+   S131 — Micro Interaction 강화
+   Subtle 0.2–0.4s transitions on hover for buttons, cards,
+   menu items. Scale 1.02 on images. No large animations.
+   ========================================================== */
+
+/* ---- Global transition layer ---- */
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Cards: lift + soft shadow ---- */
+.card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.10);
+}
+.image-box {
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.card:hover .image-box img,
+.card:hover .image-box::after {
+  opacity: 1;
+}
+/* Scale image placeholder background on hover */
+.card .image-box {
+  position: relative;
+}
+.card .image-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.card:hover .image-box::before {
+  transform: scale(1.02);
+}
+
+/* ---- Image label: slide in ---- */
+.image-label {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.card:hover .image-label {
+  transform: translateY(-2px);
+}
+
+/* ---- Card body elements: stagger fade ---- */
+.card-body h3 {
+  transition: color 0.2s ease;
+}
+.card:hover .card-body h3 {
+  color: #000;
+}
+.brand {
+  transition: opacity 0.25s ease;
+}
+.card:hover .brand {
+  opacity: 0.7;
+}
+.price-stack {
+  transition: opacity 0.25s ease;
+}
+.label-row {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.card:hover .label-row {
+  opacity: 0.8;
+  transform: translateX(2px);
+}
+
+/* ---- Buttons: scale + color shift ---- */
+.btn {
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Navigation: underline grow ---- */
+nav a::after {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav a:hover {
+  opacity: 0.85;
+}
+
+/* ---- Dropdown: smooth reveal ---- */
+.dropdown {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.dropdown a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.dropdown a:hover {
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+/* ---- Utility links ---- */
+.util a {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.util a:hover {
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+/* ---- Hero buttons: pulse ---- */
+.hero-btn {
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.hero-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Hero media: scale on active ---- */
+.hero-media-left,
+.hero-media-right {
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hero-slide.is-active .hero-media-left,
+.hero-slide.is-active .hero-media-right {
+  transform: scale(1.03);
+}
+
+/* ---- Pill filters: interactive ---- */
+.pill {
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.pill:hover {
+  transform: translateY(-1px);
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* ---- Sort items ---- */
+.sort span {
+  transition: color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+.sort span:hover {
+  color: var(--text);
+}
+
+/* ---- Lookbook cards: zoom overlay ---- */
+.lookbook-card {
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+.lookbook-card:hover {
+  transform: scale(1.01);
+}
+.lookbook-text {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.lookbook-card:hover .lookbook-text {
+  transform: translateY(-4px);
+}
+
+/* ---- Review cards: subtle lift ---- */
+.review-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Offer block: shine effect ---- */
+.offer {
+  transition: box-shadow 0.35s ease;
+  overflow: hidden;
+  position: relative;
+}
+.offer:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+.offer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.03) 50%,
+    transparent 60%
+  );
+  transition: transform 0.6s ease;
+  transform: translateX(-100%);
+}
+.offer:hover::after {
+  transform: translateX(100%);
+}
+
+/* ---- Instagram: zoom ---- */
+.instagram .image-box {
+  transition: transform 0.35s ease;
+  overflow: hidden;
+}
+.instagram .image-box:hover {
+  transform: scale(1.02);
+}
+
+/* ---- Badge: bounce ---- */
+.badge {
+  transition: transform 0.2s ease;
+}
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* ---- Tabs: underline transition ---- */
+.product-tabs > div,
+.tabs > div {
+  transition: color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+.product-tabs > div:hover,
+.tabs > div:hover {
+  color: var(--text);
+}
+
+/* ---- Detail page: gallery thumbs ---- */
+.thumb {
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.thumb:hover {
+  transform: scale(1.05);
+  border-color: #999;
+}
+
+/* ---- Qty buttons ---- */
+.qty button {
+  transition: transform 0.15s ease;
+}
+.qty button:hover {
+  transform: scale(1.15);
+}
+
+/* ---- Actions buttons ---- */
+.actions .btn {
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Recommend cards ---- */
+.recommend-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recommend-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Footer links ---- */
+.footer-grid a {
+  transition: opacity 0.2s ease;
+}
+.footer-grid a:hover {
+  opacity: 0.7;
+}
+
+/* ---- Pagination ---- */
+.pagination a {
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.pagination a:hover {
+  transform: translateY(-1px);
+}
+
+/* ---- Popup close button ---- */
+.text-popup button {
+  transition: color 0.2s ease;
+}
+.text-popup button:hover {
+  color: var(--text);
+}
+
+/* ---- Favorites controls ---- */
+.favorites-controls button {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.favorites-controls button:hover {
+  transform: scale(1.1);
+  border-color: var(--text);
+}
+
+/* ---- List page: filter pills with underline style ---- */
+.filters .pill {
+  position: relative;
+  overflow: hidden;
+}
+.filters .pill::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+.filters .pill:hover::after,
+.filters .pill.is-active::after {
+  transform: scaleX(1);
+}

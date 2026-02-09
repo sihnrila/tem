@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S132.LUMEN 상품상세</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e5e5e5;
+      --card: #ffffff;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .top-banner {
+      background: #111;
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 0;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .notice-bar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .notice-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      gap: 16px;
+    }
+    .notice-title {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 11px;
+      color: var(--text);
+    }
+    .notice-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-wrap {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      font-size: 18px;
+    }
+    nav {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .nav-item {
+      position: relative;
+    }
+    nav a {
+      position: relative;
+      padding-bottom: 4px;
+      display: inline-block;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 5;
+    }
+    .dropdown a {
+      display: block;
+      padding: 6px 4px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .util {
+      display: flex;
+      gap: 14px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .category-strip {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+    .category-strip .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .category-links {
+      display: flex;
+      gap: 18px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #111;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .section {
+      padding: 48px 0;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+    }
+    .thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .thumb {
+      height: 70px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #e7dfd6, #cfc6bb);
+      cursor: pointer;
+    }
+    .thumb.is-active {
+      border-color: #111;
+      box-shadow: inset 0 0 0 1px #111;
+    }
+    .main-image {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      min-height: 420px;
+      background: linear-gradient(135deg, #d7cec4, #b8ada0);
+      position: relative;
+    }
+    .main-image::after {
+      content: "Main Visual";
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .detail-info h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+    }
+    .detail-info .price {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .detail-info .price span {
+      color: var(--muted);
+      font-size: 14px;
+      margin-left: 8px;
+      text-decoration: line-through;
+    }
+    .detail-info p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .options {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+      margin-bottom: 16px;
+      display: grid;
+      gap: 12px;
+      font-size: 13px;
+    }
+    .option-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .qty {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+    }
+    .qty button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid #111;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: #111;
+      color: #fff;
+    }
+    .btn.outline {
+      background: transparent;
+      color: #111;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin: 16px 0 24px;
+    }
+    .summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .tabs {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 24px 0 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+    .tabs .is-active {
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 6px;
+    }
+    .tab-panel {
+      display: none;
+      line-height: 1.8;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tab-panel.is-active {
+      display: block;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .spec-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .review-list {
+      display: grid;
+      gap: 12px;
+    }
+    .review-item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .review-item h4 {
+      margin: 0 0 6px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+    .review-item p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+    }
+    .review-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .review-toolbar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .review-toolbar span {
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+    .review-toolbar .is-active {
+      color: var(--text);
+      border-color: var(--text);
+    }
+    .recommend {
+      padding: 40px 0 60px;
+    }
+    .recommend h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .recommend-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      min-height: 120px;
+    }
+    footer {
+      background: #141414;
+      color: #d0cbc5;
+      padding: 40px 0;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .footer-grid h5 {
+      margin: 0 0 10px;
+      color: #fff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .footer-bottom {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #9f968f;
+    }
+    @media (max-width: 980px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .thumbs {
+        flex-direction: row;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 620px) {
+      .header-row {
+        flex-direction: column;
+      }
+      .section {
+        padding: 40px 0;
+      }
+      .actions {
+        flex-direction: column;
+      }
+    }
+  
+    /* Fixed CTA + Quick Add */
+    .fixed-cta{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:30}
+    .fixed-cta .free-ship{font-size:12px;color:var(--muted)}
+    .fixed-cta .cta-actions{display:flex;gap:8px}
+    .fixed-cta .cta-btn{background:#111;color:#fff;border:0;border-radius:999px;padding:10px 16px;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+    .recommend-card{display:flex;flex-direction:column;gap:8px}
+    .recommend-card .rec-title{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    .recommend-card .quick-add{align-self:flex-start;border:1px solid #111;background:transparent;color:#111;border-radius:999px;padding:6px 10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    .recommend-card .quick-add:hover{background:#111;color:#fff}
+  </style>
+</head>
+<body>
+  <div class="top-banner">WELCOME BENEFIT · 5% OFF COUPON · SIGN UP TODAY</div>
+  <div class="notice-bar">
+    <div class="container">
+      <div class="notice-title">Lumen &amp; Co Notice</div>
+      <div class="notice-links">
+      <a href="notice.html">NOTICE</a>
+      <a href="faq.html">FAQ</a>
+      <a href="qna.html">Q&amp;A</a>
+      <a href="review.html">REVIEW</a>
+      <a href="archive.html">ARCHIVE</a>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="container header-wrap">
+      <div class="logo"><a href="index.html">LUMEN</a></div>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="about.html">ABOUT</a></li>
+          <li class="nav-item">
+            <a href="list.html">SHOP</a>
+            <div class="dropdown">
+              <a href="new-arrivals.html">New Arrivals</a>
+              <a href="list.html">All</a>
+              <a href="sale.html">Sale</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="archive.html">ARCHIVE</a></li>
+          <li class="nav-item">
+            <a href="community.html">COMMUNITY</a>
+            <div class="dropdown">
+              <a href="notice.html">Notice</a>
+              <a href="faq.html">FAQ</a>
+              <a href="qna.html">Q&amp;A</a>
+              <a href="review.html">Review</a>
+              <a href="archive.html">Archive</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="util">
+        <a href="shorts.html">SHORTS +</a>
+        <a href="login.html">LOGIN</a>
+        <a href="mypage.html">MY PAGE</a>
+        <a href="cart.html">0</a>
+      </div>
+    </div>
+  </header>
+  <div class="category-strip">
+    <div class="container">
+      <div class="category-links">
+        <a href="#">Shorts +</a>
+        <a href="#">Archive</a>
+        <a href="#">Gift Set</a>
+        <a href="#">Best Seller</a>
+      </div>
+      <div class="badge">Go Shop</div>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container detail-grid">
+      <div class="gallery">
+        <div class="thumbs">
+          <div class="thumb is-active" data-tone="sand"></div>
+          <div class="thumb" data-tone="clay"></div>
+          <div class="thumb" data-tone="stone"></div>
+          <div class="thumb" data-tone="dark"></div>
+        </div>
+        <div class="main-image" id="mainImage"></div>
+      </div>
+      <div class="detail-info">
+        <div class="section-subtitle">LUMEN · CALME</div>
+        <h1>Moments of Care Duo</h1>
+        <div class="price">₩43,000 <span>₩55,000</span></div>
+        <p>
+          오일프리 &amp; 무향료 포뮬러로 끈적임 없이 산뜻하게, 민감한 날에도 편안한 사용감을 제공합니다.
+        </p>
+        <div class="options">
+          <div class="option-row">
+            <span>배송</span>
+            <span>2,500원 · 국내배송</span>
+          </div>
+          <div class="option-row">
+            <span>용량</span>
+            <span>Hand 250ml + Body 250ml</span>
+          </div>
+          <div class="option-row">
+            <span>수량</span>
+            <div class="qty">
+              <button type="button" data-qty="-">-</button>
+              <span id="qtyValue">1</span>
+              <button type="button" data-qty="+">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <span>Total</span>
+          <strong id="totalPrice">₩43,000</strong>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#">Add to Cart</a>
+          <a class="btn outline" href="#">Buy Now</a>
+        </div>
+
+        <div class="tabs">
+          <div class="is-active" data-tab="detail">상품설명</div>
+          <div data-tab="guide">배송정보</div>
+          <div data-tab="review">리뷰</div>
+        </div>
+        <div class="tab-panel is-active" id="tab-detail">
+          자연주의 크림 포뮬러로 촉촉하지만 빠르게 흡수되어 하루 종일 편안한 피부를 선사합니다.
+        </div>
+        <div class="tab-panel" id="tab-guide">
+          <div class="spec-grid">
+            <div class="spec-item">배송비 · 2,500원 (5만원 이상 무료)</div>
+            <div class="spec-item">배송기간 · 평일 기준 2-3일</div>
+            <div class="spec-item">교환/반품 · 수령 후 7일 이내 가능</div>
+            <div class="spec-item">고객센터 · 02-000-0000</div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-review">
+          <div class="review-toolbar">
+            <span class="is-active">최신</span>
+            <span>평점순</span>
+          </div>
+          <div class="review-list">
+            <div class="review-item">
+              <h4>민감한 날에도 괜찮았어요</h4>
+              <p>붉어짐 없이 흡수되고 사용 후 피부가 차분해집니다. 민감 피부에도 추천하고 싶어요.</p>
+              <div class="review-meta"><span>★ 5.0</span><span>2026-01-08</span></div>
+            </div>
+            <div class="review-item">
+              <h4>은은하게 차오르는 보습감</h4>
+              <p>겉돌지 않고 속부터 촉촉해지는 느낌입니다. 아침, 저녁 모두 부담 없이 사용했어요.</p>
+              <div class="review-meta"><span>★ 5.0</span><span>2026-01-08</span></div>
+            </div>
+            <div class="review-item">
+              <h4>피부 결이 확실히 달라졌어요</h4>
+              <p>거칠던 부분이 정돈된 느낌이고 화장도 전보다 훨씬 잘 먹습니다.</p>
+              <div class="review-meta"><span>★ 5.0</span><span>2026-01-08</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="recommend">
+    <div class="container">
+      <h2>추천 상품</h2>
+      <div class="recommend-grid">
+        <div class="recommend-card"><div class="rec-title">Hydrate &amp; Soothe Duo</div><button class="quick-add" type="button">Quick Add</button></div>
+        <div class="recommend-card"><div class="rec-title">Daily Hand &amp; Body Pair</div><button class="quick-add" type="button">Quick Add</button></div>
+        <div class="recommend-card"><div class="rec-title">Soft Skin Care Edit</div><button class="quick-add" type="button">Quick Add</button></div>
+        <div class="recommend-card"><div class="rec-title">Essential Hand &amp; Body Duo</div><button class="quick-add" type="button">Quick Add</button></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h5>Customer Care</h5>
+        <div>02-000-0000 · AM 10:00 - PM 6:00</div>
+        <div>RETURN 로젠택배 서울특별시 중구 을지로 100</div>
+      </div>
+      <div>
+        <h5>Information</h5>
+        <div>ABOUT · GUIDE · AGREEMENT · PRIVACY</div>
+        <div>LUMEN COMPANY NO. 120035</div>
+      </div>
+      <div>
+        <h5>LUMEN</h5>
+        <div>JUNG-GU EULJI-RO 100</div>
+        <div>HELLO@LUMEN.CO</div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2025 LUMEN. ALL RIGHTS RESERVED.</div>
+    <div class="fixed-cta"><div class="free-ship">무료배송까지 12,000원 남았어요</div><div class="cta-actions"><button class="cta-btn" type="button">Add to Cart</button><button class="cta-btn" type="button">Buy Now</button></div></div>
+</footer>
+
+  <script>
+    (function () {
+      var basePrice = 43000;
+      var qtyValue = document.getElementById("qtyValue");
+      var totalPrice = document.getElementById("totalPrice");
+      var qtyButtons = document.querySelectorAll("[data-qty]");
+      var tabs = document.querySelectorAll("[data-tab]");
+      var panels = {
+        detail: document.getElementById("tab-detail"),
+        guide: document.getElementById("tab-guide"),
+        review: document.getElementById("tab-review")
+      };
+      var mainImage = document.getElementById("mainImage");
+      var thumbs = document.querySelectorAll(".thumb");
+
+      function formatWon(value) {
+        return "₩" + value.toLocaleString("ko-KR");
+      }
+
+      qtyButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var delta = btn.getAttribute("data-qty") === "+" ? 1 : -1;
+          var next = Math.max(1, parseInt(qtyValue.textContent, 10) + delta);
+          qtyValue.textContent = String(next);
+          totalPrice.textContent = formatWon(basePrice * next);
+        });
+      });
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          tabs.forEach(function (item) { item.classList.remove("is-active"); });
+          tab.classList.add("is-active");
+          Object.keys(panels).forEach(function (key) {
+            panels[key].classList.remove("is-active");
+          });
+          panels[tab.getAttribute("data-tab")].classList.add("is-active");
+        });
+      });
+
+      thumbs.forEach(function (thumb) {
+        thumb.addEventListener("click", function () {
+          thumbs.forEach(function (item) { item.classList.remove("is-active"); });
+          thumb.classList.add("is-active");
+          var tone = thumb.getAttribute("data-tone");
+          var colors = {
+            sand: "linear-gradient(135deg, #d7cec4, #b8ada0)",
+            clay: "linear-gradient(135deg, #c7b9aa, #8d7b6a)",
+            stone: "linear-gradient(135deg, #b2ada6, #7a736b)",
+            dark: "linear-gradient(135deg, #2f2c28, #5a534b)"
+          };
+          mainImage.style.background = colors[tone] || colors.sand;
+        });
+      });
+    })();
+  </script>
+  <script src="review-sort.js"></script>
+</body>
+</html>

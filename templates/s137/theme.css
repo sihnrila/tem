@@ -1,0 +1,445 @@
+/* ==========================================================
+   S137 — Typography 중심 디자인
+   Serif display titles, light sans body, uppercase + tracking,
+   price as design element, strong typographic hierarchy.
+   ========================================================== */
+
+/* ---- Google Fonts: Playfair Display for headings ---- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ---- Global typography ---- */
+body {
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+}
+
+/* ---- Serif headings ---- */
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 500;
+}
+
+/* ---- Section titles: serif display ---- */
+.section-title h2 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 30px !important;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.section-title a {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.section-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+}
+.section-subtitle.emphasis {
+  font-style: italic;
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Section divider: typographic ---- */
+.section-divider {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  font-style: italic;
+}
+
+/* ---- Logo: serif ---- */
+.logo {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.25em;
+}
+
+/* ---- Navigation: wide tracking ---- */
+nav {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+nav a::after {
+  height: 1px;
+}
+
+/* ---- Utility: wide tracking ---- */
+.util {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+}
+
+/* ---- Top bars: tracking ---- */
+.top-banner {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+}
+.top-links {
+  letter-spacing: 0.22em;
+}
+.notice-title {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* ---- Card typography: strong hierarchy ---- */
+.card-body h3 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  line-height: 1.3;
+}
+.brand {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ---- Price as design element ---- */
+.price-stack {
+  font-size: 20px;
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  gap: 8px;
+}
+.price-stack::before {
+  font-size: 13px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #111;
+}
+.price-line {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  color: #999;
+}
+.price-line.sale {
+  font-size: 20px;
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 600;
+  color: #111;
+}
+.card-body[data-rating][data-review]::after {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+}
+
+/* ---- Label row: tiny caps ---- */
+.label-row {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ---- Buttons: typographic ---- */
+.btn {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  font-weight: 400;
+}
+.badge {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  font-weight: 500;
+}
+
+/* ---- Pills: tracking ---- */
+.pill {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* ---- Hero: typographic impact ---- */
+.hero-card h1,
+.hero-meta h1,
+.hero h1 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 42px !important;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+.hero .tag,
+.hero-card .tag {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.hero .section-subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.hero .btn {
+  letter-spacing: 0.3em;
+}
+.hero-counter {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+/* ---- Lookbook: typographic labels ---- */
+.lookbook-text {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---- Story: serif elegance ---- */
+.story h3 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.story p {
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+.tagline {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+}
+
+/* ---- Reviews: mixed typography ---- */
+.review-card h4 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.review-card p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.review-meta {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  font-weight: 300;
+}
+
+/* ---- Offer: typographic headline ---- */
+.offer h3 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.offer p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.offer .btn {
+  letter-spacing: 0.3em;
+}
+
+/* ---- Product tabs: tracking ---- */
+.product-tabs > div {
+  letter-spacing: 0.25em;
+  font-weight: 300;
+}
+
+/* ---- Detail page: typography hierarchy ---- */
+.detail-info h1 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.detail-info .section-subtitle {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.detail-info .price {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.detail-info .price span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.detail-info p {
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+.options {
+  font-size: 13px;
+  font-weight: 300;
+}
+.summary {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 16px;
+}
+.tabs > div {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+}
+.tab-panel {
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+.review-item h4 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.review-item p {
+  font-size: 13px;
+  font-weight: 300;
+}
+.review-toolbar {
+  letter-spacing: 0.18em;
+}
+
+/* ---- List page: display title ---- */
+.section-title h1 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.filters .pill {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.sort span {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.toolbar .section-subtitle {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* ---- Recommend: typographic ---- */
+.recommend h2 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.recommend-card {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ---- Pagination: serif numbers ---- */
+.pagination a {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+/* ---- Footer: typographic ---- */
+.footer-grid h5 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.footer-grid {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.footer-bottom {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+}
+
+/* ---- Dropdown: typographic ---- */
+.dropdown a {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 300;
+}
+
+/* ---- Category strip: tracking ---- */
+.category-links {
+  letter-spacing: 0.22em;
+  font-weight: 300;
+}
+
+/* ---- Text popup: serif ---- */
+.text-popup strong {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* ---- Community/Board pages ---- */
+.panel h3, .item h3, .item h4 {
+  font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+  font-weight: 500;
+}
+
+/* ---- Reorder: move products section up for impact ---- */
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > section:nth-of-type(4) { order: 2; }
+main > section:nth-of-type(2) { order: 4; }
+
+/* ---- Responsive: scale down headlines ---- */
+@media (max-width: 980px) {
+  .section-title h2 { font-size: 24px !important; }
+  .hero h1, .hero-card h1, .hero-meta h1 { font-size: 30px !important; }
+  .detail-info h1 { font-size: 24px; }
+  .section-title h1 { font-size: 28px; }
+}
+@media (max-width: 620px) {
+  .section-title h2 { font-size: 20px !important; }
+  .hero h1, .hero-card h1, .hero-meta h1 { font-size: 24px !important; }
+  .detail-info h1 { font-size: 22px; }
+  .detail-info .price { font-size: 20px; }
+  .price-stack, .price-line.sale { font-size: 18px; }
+}

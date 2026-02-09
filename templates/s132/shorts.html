@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S132.LUMEN SHORTS</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    :root { --bg:#fff; --text:#111; --muted:#666; --line:#e5e5e5; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .container { max-width:1240px; margin:0 auto; padding:0 24px; }
+    .top-banner { background:#111; color:#fff; font-size:13px; padding:10px 0; text-align:center; letter-spacing:.02em; }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95); border-bottom:1px solid var(--line); }
+    .header-wrap { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; padding:18px 0; }
+    .logo { font-weight:700; letter-spacing:.2em; font-size:18px; }
+    nav { font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+    .nav-menu { list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center; }
+    .nav-item { position:relative; }
+    nav a { position:relative; padding-bottom:4px; display:inline-block; }
+    nav a::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:currentColor; transform:scaleX(0); transition:transform .2s ease; }
+    nav a:hover::after { transform:scaleX(1); }
+    .dropdown { position:absolute; top:100%; left:0; min-width:200px; background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px 12px; box-shadow:0 12px 30px rgba(0,0,0,.12); opacity:0; pointer-events:none; transform:translateY(8px); transition:opacity .2s ease, transform .2s ease; z-index:5; }
+    .dropdown a { display:block; padding:6px 4px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+    .nav-item:hover .dropdown { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .util { display:flex; gap:14px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); justify-content:flex-end; }
+    .section { padding:80px 0; }
+    .section h1 { margin:0 0 8px; font-size:28px; letter-spacing:.12em; text-transform:uppercase; }
+    .section p { margin:0; color:var(--muted); line-height:1.7; }
+    .tabs { display:flex; gap:16px; margin:24px 0 12px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
+    .tabs span { color:var(--muted); border-bottom:1px solid transparent; padding-bottom:6px; }
+    .tabs .is-active { color:var(--text); border-color:var(--text); }
+    .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:16px; min-height:140px; }
+    footer { background:#111; color:#d0cbc5; padding:40px 0; margin-top:40px; }
+    .footer-bottom { font-size:12px; color:#9f968f; }
+  </style>
+</head>
+<body>
+  <div class="top-banner">WELCOME BENEFIT · 5% OFF COUPON · SIGN UP TODAY</div>
+  <header>
+    <div class="container header-wrap">
+      <div class="logo"><a href="index.html">LUMEN</a></div>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="about.html">ABOUT</a></li>
+          <li class="nav-item">
+            <a href="list.html">SHOP</a>
+            <div class="dropdown">
+              <a href="new-arrivals.html">New Arrivals</a>
+              <a href="list.html">All</a>
+              <a href="sale.html">Sale</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="archive.html">ARCHIVE</a></li>
+          <li class="nav-item">
+            <a href="community.html">COMMUNITY</a>
+            <div class="dropdown">
+              <a href="notice.html">Notice</a>
+              <a href="faq.html">FAQ</a>
+              <a href="qna.html">Q&amp;A</a>
+              <a href="review.html">Review</a>
+              <a href="archive.html">Archive</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="util">
+        <a href="shorts.html">SHORTS +</a>
+        <a href="login.html">LOGIN</a>
+        <a href="mypage.html">MY PAGE</a>
+        <a href="cart.html">0</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section container">
+    <h1>Shorts</h1>
+    <p>쇼츠 콘텐츠/추천 목록 페이지입니다.</p>
+    <div class="tabs">
+      <span class="is-active">Shorts</span>
+      <span>Hand</span>
+      <span>Body</span>
+    </div>
+    <div class="grid">
+      <div class="card">Shorts Pick 01</div>
+      <div class="card">Shorts Pick 02</div>
+      <div class="card">Shorts Pick 03</div>
+      <div class="card">Shorts Pick 04</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bottom">© 2025 LUMEN. ALL RIGHTS RESERVED.</div>
+  </footer>
+</body>
+</html>

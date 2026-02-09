@@ -1,0 +1,248 @@
+/* ==========================================================
+   S133 — Subtle Motion Scroll
+   Scroll-reveal for sections, soft parallax on hero/feature
+   images. Minimal motion — no abrupt transitions.
+   ========================================================== */
+
+/* ---- Reveal system: elements start hidden, appear on scroll ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Staggered reveal for child elements ---- */
+.reveal.is-visible .card:nth-child(1) { transition-delay: 0s; }
+.reveal.is-visible .card:nth-child(2) { transition-delay: 0.08s; }
+.reveal.is-visible .card:nth-child(3) { transition-delay: 0.16s; }
+.reveal.is-visible .card:nth-child(4) { transition-delay: 0.24s; }
+
+/* Cards get their own reveal */
+.product-grid .card,
+.offer-grid .card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.is-visible .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Parallax layers for hero ---- */
+.hero-media-left,
+.hero-media-right {
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.hero-slide.is-active .hero-media-left,
+.hero-slide.is-active .hero-media-right {
+  transform: scale(1.04);
+}
+
+/* ---- Hero content: fade up ---- */
+.hero-meta {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+.hero-slide.is-active .hero-meta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Hero transition: crossfade ---- */
+.hero-slide {
+  transition: opacity 1.2s ease;
+}
+
+/* ---- Section titles: reveal from left ---- */
+.section-title {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible .section-title,
+.is-visible .section-title,
+.is-visible.section-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Make .section-title visible if it IS the reveal target */
+.section-title.reveal.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Section subtitle: soft delay ---- */
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
+}
+.reveal.is-visible .section-subtitle,
+.is-visible .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Lookbook: scale up on reveal ---- */
+.lookbook-card {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible .lookbook-card {
+  opacity: 1;
+  transform: scale(1);
+}
+.reveal.is-visible .lookbook-card:nth-child(1) { transition-delay: 0s; }
+.reveal.is-visible .lookbook-card:nth-child(2) { transition-delay: 0.1s; }
+.reveal.is-visible .lookbook-card:nth-child(3) { transition-delay: 0.2s; }
+
+/* ---- Story image: parallax drift ---- */
+.story .image-box {
+  will-change: transform;
+  transition: transform 0.8s ease;
+}
+
+/* ---- Reviews: slide in ---- */
+.review-card {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.is-visible .review-card {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Offer: fade in with scale ---- */
+.offer {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible .offer,
+.offer.reveal.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---- Instagram: stagger ---- */
+.instagram .image-box {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.reveal.is-visible .instagram .image-box:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.reveal.is-visible .instagram .image-box:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.08s; }
+.reveal.is-visible .instagram .image-box:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.16s; }
+.reveal.is-visible .instagram .image-box:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.24s; }
+
+/* ---- Favorites: slide track motion ---- */
+.favorites-track {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---- Section divider: fade in ---- */
+.section-divider {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section-divider.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Smooth global scrolling ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Buttons: soft motion ---- */
+.btn {
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ---- Card hover: gentle ---- */
+.card {
+  transition: transform 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ---- Detail page: reveal info ---- */
+.detail-info {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: detailReveal 0.7s ease 0.2s forwards;
+}
+@keyframes detailReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Gallery: main image fade ---- */
+.main-image {
+  transition: background 0.4s ease;
+}
+
+/* ---- List page: filters motion ---- */
+.pill {
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.pill:hover {
+  transform: translateY(-2px);
+}
+.sort span {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+.sort span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+.sort span.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ---- Recommend: stagger ---- */
+.recommend-card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.recommend-card:nth-child(1) { transition-delay: 0s; }
+.recommend-card:nth-child(2) { transition-delay: 0.08s; }
+.recommend-card:nth-child(3) { transition-delay: 0.16s; }
+.recommend-card:nth-child(4) { transition-delay: 0.24s; }
+
+/* ---- Responsive: reduce motion on mobile ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

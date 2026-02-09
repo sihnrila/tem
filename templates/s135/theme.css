@@ -1,0 +1,315 @@
+/* ==========================================================
+   S135 — Fixed CTA & Conversion UX
+   Fixed mobile CTA bar on detail, free-shipping progress,
+   quick-add buttons on list/index cards, mini cart drawer.
+   ========================================================== */
+
+/* ---- Fixed CTA bar (detail page) ---- */
+.fixed-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 25;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+}
+.fixed-cta .free-ship {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+.fixed-cta .free-ship::before {
+  content: "🚚 ";
+}
+.fixed-cta .cta-actions {
+  display: flex;
+  gap: 8px;
+}
+.cta-btn {
+  background: #111;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-family: inherit;
+}
+.cta-btn:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+.cta-btn:active {
+  transform: scale(0.98);
+}
+
+/* ---- Free shipping progress bar ---- */
+.ship-progress {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.ship-progress-bar {
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.ship-progress-fill {
+  height: 100%;
+  background: #111;
+  width: 76%;
+  transition: width 0.4s ease;
+}
+
+/* ---- Quick-add button on cards ---- */
+.quick-add {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #111;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+  z-index: 2;
+  font-family: inherit;
+}
+.card:hover .quick-add,
+.image-box:hover .quick-add {
+  opacity: 1;
+  transform: translateY(0);
+}
+.quick-add:hover {
+  background: #333;
+}
+
+/* ---- Mini cart drawer ---- */
+.cart-drawer {
+  position: fixed;
+  right: -360px;
+  top: 0;
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  border-left: 1px solid var(--line);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.1);
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 35;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.cart-drawer.is-open {
+  right: 0;
+}
+.cart-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 34;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.cart-drawer-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Detail info: sticky for conversion ---- */
+.detail-info {
+  position: sticky;
+  top: 100px;
+}
+
+/* ---- Detail page: extra bottom padding for CTA bar ---- */
+body:has(.detail-info) {
+  padding-bottom: 70px;
+}
+
+/* ---- Urgency elements ---- */
+.urgency-text {
+  color: #c0392b;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  animation: urgencyPulse 2s ease infinite;
+}
+@keyframes urgencyPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ---- Trust badges ---- */
+.trust-badges {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.trust-badges span::before {
+  content: "✓ ";
+  color: #27ae60;
+}
+
+/* ---- Enhanced buttons ---- */
+.actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 18px;
+  font-weight: 600;
+}
+.actions .btn:first-child {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+.actions .btn:first-child:hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* ---- Card actions overlay ---- */
+.card-actions {
+  display: none;
+}
+
+/* ---- List page: sticky toolbar ---- */
+.toolbar {
+  position: sticky;
+  top: 68px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  z-index: 4;
+  margin: 12px 0 20px;
+}
+.sort span {
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.sort span.is-active {
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+.sort span:hover {
+  color: var(--text);
+}
+
+/* ---- List page: total items badge ---- */
+.toolbar .section-subtitle {
+  font-weight: 500;
+}
+
+/* ---- Card hover: show add to cart text ---- */
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Enhanced card hover ---- */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Pagination: highlighted ---- */
+.pagination a.is-active {
+  background: #111;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border-bottom: 0;
+}
+
+/* ---- Category strip: enhanced ---- */
+.category-strip {
+  border-bottom: 1px solid var(--line);
+}
+.category-links a {
+  transition: color 0.2s ease;
+}
+.category-links a:hover {
+  color: var(--text);
+}
+
+/* ---- Recommend section order boost ---- */
+.recommend {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+
+/* ---- Offer: conversion-oriented ---- */
+.offer .btn {
+  padding: 14px 24px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .cart-drawer {
+    width: 300px;
+    right: -300px;
+  }
+  .fixed-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  .fixed-cta .cta-actions {
+    width: 100%;
+  }
+  .cta-btn {
+    flex: 1;
+    padding: 10px 14px;
+  }
+  .detail-info {
+    position: static;
+  }
+}
+@media (max-width: 620px) {
+  .cart-drawer {
+    width: 100%;
+    right: -100%;
+  }
+  .quick-add {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
