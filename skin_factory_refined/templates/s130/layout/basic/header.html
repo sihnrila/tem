@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes"/>
+<title>{$shop_name}</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="/skin/s130/swiper-bundle.min.css">
+<link rel="stylesheet" href="/skin/s130/base.css">
+<link rel="stylesheet" href="/skin/s130/framework.css">
+<link rel="stylesheet" href="/skin/s130/theme.css">
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="theme01">
+<div id="skipNavigation">
+	<p><a href="#category">전체상품목록 바로가기</a></p>
+	<p><a href="#contents">본문 바로가기</a></p>
+</div>
+<div id="wrap">
+
+<header id="header" class="header">
+	<div class="inner">
+		<div class="top_nav_box ko-font" id="top_nav_box">
+			<div class="top_logo">
+				<a href="/">
+					<span class="logo" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#fff;">SHOP NAME</span><span class="logo_b" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#111;">SHOP NAME</span>
+				</a>
+			</div>
+			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
+
+			<div>
+				<div class="top_category RW en-font">
+					<!--
+						카페24 카테고리 모듈 사용 시:
+						<div module="category_product" class="xans-element- xans-category xans-category-product">
+						아래는 수동 메뉴입니다. 필요에 따라 카페24 카테고리 모듈로 교체하세요.
+					-->
+					<ul id="category-list-container">
+						<li class="cate__li">
+							<a href="/about.html">COMPANY</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="/about.html">브랜드 소개</a></li>
+									<li><a href="/about.html">장인 공방</a></li>
+									<li><a href="/contact.html">쇼룸 안내</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="cate__li">
+							<a href="/product/list.html">SHOP</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="/product/list.html?cate_no=25">New Arrivals</a></li>
+									<li><a href="/product/list.html">All Chairs</a></li>
+									<li><a href="/product/list.html?cate_no=26">Sale</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="cate01">
+							<a href="/archive.html" style="position:relative;">STORY</a>
+						</li>
+						<li>
+							<a href="/board/product/list.html">REVIEW</a>
+						</li>
+						<li class="cate__li">
+							<a href="/community.html">COMMUNITY</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="/board/free/list.html">새소식</a></li>
+									<li><a href="/board/free/list.html">자주하는질문들</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="top_mypage">
+				<li class="top_search RW"><a href="javascript:;" class="eSearch"><i class="uil uil-search"></i></a></li>
+				<li class="RW"><a href="/member/login.html"><i class="uil uil-user"></i></a></li>
+				<li><a href="/order/basket.html"><i class="uil uil-shopping-bag"></i><span class="basket__count">(<span module="layout_orderbasketcount" class="xans-element- xans-layout xans-layout-orderbasketcount">0</span>)</span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<!-- 사이드 네비게이션 -->
+<aside id="aside">
+	<nav class="navigation-menu" role="navigation">
+		<div class="navigation_state">
+			<!-- 카페24 회원 모듈 -->
+			<div module="layout_logoff" class="xans-element- xans-layout xans-layout-logoff">
+				<a href="/member/join.html">회원가입</a>
+				<a href="/member/login.html">로그인</a>
+			</div>
+			<div module="layout_logon" class="xans-element- xans-layout xans-layout-logon">
+				<a href="/exec/front/Member/Logout/">로그아웃</a>
+				<a href="/myshop/order/list.html">주문조회</a>
+			</div>
+			<a href="/myshop/recent_product.html">최근본상품</a>
+		</div>
+		<div id="slideCateList" class="navigation-menu__category">
+			<ul class="categoryList">
+			<li class="txt_menu">
+				<a href="/product/list.html">SHOP</a>
+				<ul>
+					<li><a href="/product/list.html?cate_no=25">New Arrivals</a></li>
+					<li><a href="/product/list.html">All Chairs</a></li>
+					<li><a href="/product/list.html?cate_no=26">Sale</a></li>
+				</ul>
+			</li>
+			<li class="txt_menu">
+				<a href="/about.html">COMPANY</a>
+				<ul>
+					<li><a href="/about.html">브랜드 소개</a></li>
+					<li><a href="/about.html">장인 공방</a></li>
+					<li><a href="/contact.html">쇼룸 안내</a></li>
+				</ul>
+			</li>
+				<li><a href="/archive.html">STORY</a></li>
+				<li class="txt_menu">
+					<a href="/community.html">COMMUNITY</a>
+					<ul>
+						<li><a href="/board/free/list.html">새소식</a></li>
+						<li><a href="/board/product/list.html">사용후기</a></li>
+						<li><a href="/board/free/list.html">자주하는질문들</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="side__bottom">
+			<div class="side-sns">
+				<a href="https://www.instagram.com" target="_blank">instagram</a>
+				<a href="https://www.youtube.com" target="_blank">youtube</a>
+			</div>
+			<div style="line-height:1.5;font-size:12px">에스엠이 멤버가 되어 최고의 제품과 감성을 만나보세요.<br>© 에스엠이웹에이젼시</div>
+		</div>
+		<button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i>닫기</button>
+	</nav>
+</aside>
+
+
+<div id="container">
+	<div id="contents">
