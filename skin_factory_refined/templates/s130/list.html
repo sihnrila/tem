@@ -1,312 +1,60 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes"/>
-<title>SHOP - 쇼핑몰 이름</title>
-<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="framework.css">
-<link rel="stylesheet" href="theme.css">
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-</head>
-<body class="theme01" id="sub">
-<div id="wrap">
+<!--
+============================================================
+  S130 상품 목록 페이지 - Cafe24 모듈 버전
+  카페24 스킨편집기 > /product/list.html 에 붙여넣기
+============================================================
+-->
 
-<header id="header" class="header">
-	<div class="inner">
-		<div class="top_nav_box ko-font" id="top_nav_box">
-			<div class="top_logo">
-				<a href="index.html">
-					<span class="logo" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#fff;">SHOP NAME</span><span class="logo_b" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#111;">SHOP NAME</span>
-				</a>
-			</div>
-			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
-			<div>
-				<div class="top_category RW en-font">
-					<ul id="category-list-container">
-						<li class="cate__li"><a href="about.html">COMPANY</a></li>
-						<li class="cate__li"><a href="list.html">SHOP</a></li>
-						<li><a href="archive.html">STORY</a></li>
-						<li><a href="review.html">REVIEW</a></li>
-						<li class="cate__li"><a href="community.html">COMMUNITY</a></li>
-					</ul>
-				</div>
-			</div>
-			<ul class="top_mypage">
-				<li class="top_search RW"><a href="javascript:;"><i class="uil uil-search"></i></a></li>
-				<li class="RW"><a href="login.html"><i class="uil uil-user"></i></a></li>
-				<li><a href="cart.html"><i class="uil uil-shopping-bag"></i><span class="basket__count">( 0 )</span></a></li>
+<!--@layout(/layout/basic/header.html)-->
+
+<div class="page-content position-relative">
+	<div class="container section" style="padding-top:140px;">
+
+		<!-- 카테고리 타이틀 (Cafe24 자동 출력) -->
+		<div class="headingArea" style="text-align:center;margin-bottom:40px;">
+			<h2 style="font-size:32px;font-weight:600;letter-spacing:2px;">{$category_title_text}</h2>
+			<p style="font-size:14px;color:#888;margin-top:10px;">{$category_description}</p>
+		</div>
+
+		<!-- 카테고리 메뉴 (하위 카테고리 자동 출력) -->
+		<div module="product_normalmenu" class="xans-element- xans-product xans-product-normalmenu">
+			<!-- Cafe24가 자동으로 하위 카테고리 메뉴를 출력합니다 -->
+		</div>
+
+		<!-- 상품 목록 -->
+		<div module="product_listnormal" class="xans-element- xans-product xans-product-listnormal ec-base-product">
+			<ul class="prdList grid4">
+				<li class="xans-record-">
+					<div class="prdList__item" style="position:relative">
+						<div class="thumbnail position-relative">
+							<a href="{$link_product_detail}">
+								<img src="{$image_medium}" alt="{$product_name}" loading="lazy" class="product-list-img">
+								<img src="{$image_medium}" alt="{$product_name}" loading="lazy" class="product-list-img_on">
+							</a>
+							<div class="icon__box">
+								<span class="wish"><a href="{$action_wish}">WISH</a></span>
+								<span class="cart"><a href="{$action_cart}">CART</a></span>
+							</div>
+						</div>
+						<div class="description">
+							<div class="name"><a href="{$link_product_detail}">{$product_name}</a></div>
+							<ul class="spec">
+								<li>{$product_custom}</li>
+								<li class="{$product_sale_display}"><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">{$product_price}</span></li>
+								<li><span style="font-size:13px;color:#000000;font-weight:bold;">{$product_sale_price}</span> <span class="{$product_sale_display}" style="color:var(--point-color);font-weight:bold;">{$discount_rate}%</span></li>
+							</ul>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</div>
-	</div>
-</header>
 
-<div id="container">
-	<div id="contents">
-		<div class="page-content position-relative">
-			<div class="container section" style="padding-top:140px;">
+		<!-- 더보기 / 페이지네이션 -->
+		<div module="product_listmore" class="xans-element- xans-product xans-product-listmore ec-base-paginate">
+			<!-- Cafe24가 자동으로 페이지네이션을 출력합니다 -->
+		</div>
 
-				<div class="headingArea" style="text-align:center;margin-bottom:40px;">
-					<h2 style="font-size:32px;font-weight:600;letter-spacing:2px;">ALL CHAIRS</h2>
-					<p style="font-size:14px;color:#888;margin-top:10px;">공간을 완성하는 디자인 체어 컬렉션</p>
-				</div>
-
-				<div class="ec-base-product">
-					<ul class="prdList grid4">
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/1.png" alt="오크 프레임 모던 라운지 체어" loading="lazy" class="product-list-img">
-				<img src="images/1.png" alt="오크 프레임 모던 라운지 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">오크 프레임 모던 라운지 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-LN-OK-NT</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">890,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/2.png" alt="인더스트리얼 모던 바 체어" loading="lazy" class="product-list-img">
-				<img src="images/2.png" alt="인더스트리얼 모던 바 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">인더스트리얼 모던 바 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-BR-MT-BK</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">450,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/3.png" alt="모던 이그제큐티브 오피스 체어" loading="lazy" class="product-list-img">
-				<img src="images/3.png" alt="모던 이그제큐티브 오피스 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">모던 이그제큐티브 오피스 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-OF-MT-BK</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">1,290,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/4.png" alt="스컬프처 스위블 라운지 체어" loading="lazy" class="product-list-img">
-				<img src="images/4.png" alt="스컬프처 스위블 라운지 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">스컬프처 스위블 라운지 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-SW-MT-BK</span></li>
-				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">2,350,000원</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">1,850,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/5.png" alt="모던 컴팩트 액센트 체어" loading="lazy" class="product-list-img">
-				<img src="images/5.png" alt="모던 컴팩트 액센트 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">모던 컴팩트 액센트 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-AC-MT-BK</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">680,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/6.png" alt="미드센추리 모던 플라이우드 체어" loading="lazy" class="product-list-img">
-				<img src="images/6.png" alt="미드센추리 모던 플라이우드 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">미드센추리 모던 플라이우드 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-MC-PL-WD</span></li>
-				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">780,000원</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">520,000원</span> <span style="color:var(--point-color);font-weight:bold;">33%</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/7.png" alt="모던 블랙 락킹 체어" loading="lazy" class="product-list-img">
-				<img src="images/7.png" alt="모던 블랙 락킹 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">모던 블랙 락킹 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-RK-WD-BK</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">780,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/8.png" alt="스칸디 모던 다이닝 체어" loading="lazy" class="product-list-img">
-				<img src="images/8.png" alt="스칸디 모던 다이닝 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">스칸디 모던 다이닝 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-DN-WD-WH</span></li>
-				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">520,000원</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">390,000원</span> <span style="color:var(--point-color);font-weight:bold;">25%</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/9.png" alt="모던 암 쉘 체어" loading="lazy" class="product-list-img">
-				<img src="images/9.png" alt="모던 암 쉘 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">모던 암 쉘 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-SH-WD-WH</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">420,000원</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-<li class="xans-record-">
-	<div class="prdList__item" style="position:relative">
-		<div class="thumbnail position-relative">
-			<a href="detail.html">
-				<img src="images/10.png" alt="모던 레더 버터플라이 체어" loading="lazy" class="product-list-img">
-				<img src="images/10.png" alt="모던 레더 버터플라이 체어" loading="lazy" class="product-list-img_on">
-			</a>
-			<div class="icon__box"><span class="wish">WISH</span><span class="cart">CART</span></div>
-		</div>
-		<div class="description">
-			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">모던 레더 버터플라이 체어</span></a></div>
-			<ul class="spec">
-				<li><span style="font-size:12px;color:#333333;">MR-CH-BF-LD-BR</span></li>
-				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">1,450,000원</span></li>
-				<li><span style="font-size:13px;color:#000000;font-weight:bold;">1,150,000원</span> <span style="color:var(--point-color);font-weight:bold;">20%</span></li>
-			</ul>
-		</div>
-	</div>
-</li>
-
-					</ul>
-				</div>
-
-			</div>
-		</div>
 	</div>
 </div>
 
-<div class="bottom-nav RMB RTB">
-	<ul class="bottom-nav__tabBar">
-		<li><button type="button" class="btnNav eNavFold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-width="1.5" d="M3 6h18M3 12h18M3 18h18"/></svg><span>네비게이션</span></button></li>
-		<li><button type="button" class="btnSearch eSearch"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"/><path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"/></svg><span>검색</span></button></li>
-		<li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-width="1.5" d="M12 3L2 11.36V22h7.692v-7.6h4.616V22H22V11.36L12 3z"/></svg><span>홈</span></a></li>
-		<li><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74z"/></svg><span>Cart <em class="count">0</em></span></a></li>
-		<li><a href="mypage.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"/><path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"/></svg><span>마이쇼핑</span></a></li>
-	</ul>
-</div>
-
-<div class="footer_margin"></div>
-<footer id="footer" class="layout1">
-	<div class="inner">
-		<div class="footer-row alt-font">
-			<div class="bt_info">
-				<h2>Address</h2>
-				<span class="tit">상호명</span> <span class="tit">CEO</span><br>
-				<span class="tit">사업장 주소</span> <span class="tit">대표 전화</span><br>
-				<span class="tit">사업자 등록번호</span> <span class="tit">통신판매업 신고번호</span><br>
-				<span class="tit">개인정보보호책임자</span>
-			</div>
-			<div class="bt_info">
-				<h2>Link</h2>
-				<div class="util__area">
-					<a href="about.html">COMPANY</a> <a href="#">AGREEMENT</a> <a href="#">PRIVACY POLICY</a> <a href="faq.html">GUIDE</a>
-				</div>
-			</div>
-			<div class="bt_info"><h2>Info</h2></div>
-			<div style="font-size:12px" class="sns__btn"><a href="https://instagram.com/" target="_blank"><i class="uil uil-instagram icon-small"></i></a></div>
-		</div>
-		<div class="copy__area text-right">
-			<span class="bt_copyright alt-font">© 쇼핑몰 이름 2024. <a href="https://www.smewa.com" target="_blank">Design by SME</a></span>
-		</div>
-	</div>
-</footer>
-
-</div><!-- //wrap -->
-<div class="layer_shadow" id="layer_shadow"></div>
-
-<script>
-(function(){
-	var header = document.getElementById('header');
-	if(!header) return;
-	window.addEventListener('scroll', function(){
-		header.classList.toggle('fixed', window.scrollY > 100);
-	});
-})();
-</script>
-</body>
-</html>
+<!--@layout(/layout/basic/footer.html)-->
