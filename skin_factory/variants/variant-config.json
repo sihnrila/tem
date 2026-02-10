@@ -1,0 +1,40 @@
+[
+  {
+    "id": "skin-001",
+    "name": "Sage",
+    "desc": "Minimal editorial layout",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#777777",
+      "line": "#eeeeee",
+      "accent": "#111111",
+      "radius": "12px",
+      "shadow": "0 8px 24px rgba(0,0,0,0.08)",
+      "pagePadding": "24px",
+      "gridGap": "24px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "sticky",
+      "gridDensity": "normal",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "brandDense"
+    },
+    "features": {
+      "freeShippingBar": true,
+      "reviewHighlight": true,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Sage Editorial",
+      "subtitle": "Clean beauty, refined commerce",
+      "keywords": ["minimal", "editorial", "conversion"]
+    }
+  }
+]

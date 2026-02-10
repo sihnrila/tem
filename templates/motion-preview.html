@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kokorocu Motion Template Preview</title>
+  <link rel="stylesheet" href="./motion-preview.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <div class="logo">KOKOROCU</div>
+      <nav class="nav">
+        <a href="#">Shop</a>
+        <a href="#">New</a>
+        <a href="#">Lookbook</a>
+        <a href="#">Journal</a>
+      </nav>
+      <div class="header-actions">KRW · Login · Cart</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section parallax" data-parallax>
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">CORE — MOTION</p>
+          <h1>Quiet motion, premium detail.</h1>
+          <p>카페24 프리미엄 스킨에 어울리는 부드러운 스크롤, 미묘한 인터랙션.</p>
+          <div class="hero-actions">
+            <button class="btn primary">컬렉션 보기</button>
+            <button class="btn ghost">브랜드 소개</button>
+          </div>
+        </div>
+        <div class="hero-media reveal delay-1">
+          <img
+            class="lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1100'/%3E"
+            data-src="https://picsum.photos/900/1100?random=11"
+            alt="Hero preview"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <h2>Categories</h2>
+        <p>카테고리 카드 호버 시 CTA가 나타납니다.</p>
+      </div>
+      <div class="category-grid">
+        <article class="category-card reveal">
+          <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='420'/%3E" data-src="https://picsum.photos/600/420?random=21" alt="Category 1">
+          <div class="category-content">
+            <h3>Outer</h3>
+            <button class="btn ghost small">Shop now</button>
+          </div>
+        </article>
+        <article class="category-card reveal delay-1">
+          <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='420'/%3E" data-src="https://picsum.photos/600/420?random=22" alt="Category 2">
+          <div class="category-content">
+            <h3>Top</h3>
+            <button class="btn ghost small">Shop now</button>
+          </div>
+        </article>
+        <article class="category-card reveal delay-2">
+          <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='420'/%3E" data-src="https://picsum.photos/600/420?random=23" alt="Category 3">
+          <div class="category-content">
+            <h3>Bottom</h3>
+            <button class="btn ghost small">Shop now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <h2>Best Sellers</h2>
+        <p>카드 호버 시 CTA가 부드럽게 등장합니다.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='680'/%3E" data-src="https://picsum.photos/520/680?random=31" alt="Product 1">
+            <div class="card-cta">
+              <button class="btn primary small" data-toast="장바구니에 담았습니다">장바구니</button>
+              <button class="btn ghost small">바로구매</button>
+            </div>
+          </div>
+          <div class="product-meta">
+            <h3>Mono Knit Set</h3>
+            <p>₩248,000</p>
+          </div>
+        </article>
+        <article class="product-card reveal delay-1">
+          <div class="product-media">
+            <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='680'/%3E" data-src="https://picsum.photos/520/680?random=32" alt="Product 2">
+            <div class="card-cta">
+              <button class="btn primary small" data-toast="장바구니에 담았습니다">장바구니</button>
+              <button class="btn ghost small">바로구매</button>
+            </div>
+          </div>
+          <div class="product-meta">
+            <h3>Calm Trench</h3>
+            <p>₩318,000</p>
+          </div>
+        </article>
+        <article class="product-card reveal delay-2">
+          <div class="product-media">
+            <img class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='680'/%3E" data-src="https://picsum.photos/520/680?random=33" alt="Product 3">
+            <div class="card-cta">
+              <button class="btn primary small" data-toast="장바구니에 담았습니다">장바구니</button>
+              <button class="btn ghost small">바로구매</button>
+            </div>
+          </div>
+          <div class="product-meta">
+            <h3>Soft Balance Shirt</h3>
+            <p>₩198,000</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pdp">
+      <div class="section-head reveal">
+        <h2>Product Detail Preview</h2>
+        <p>갤러리 스와이프 + 옵션 버튼 애니메이션</p>
+      </div>
+      <div class="pdp-wrap">
+        <div class="pdp-gallery reveal">
+          <div class="pdp-main">
+            <img id="pdpMain" class="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='900'/%3E" data-src="https://picsum.photos/720/900?random=41" alt="PDP main">
+          </div>
+          <div class="pdp-thumbs" id="pdpThumbs">
+            <button class="thumb active" data-src="https://picsum.photos/720/900?random=41"><img src="https://picsum.photos/120/160?random=41" alt="Thumb 1"></button>
+            <button class="thumb" data-src="https://picsum.photos/720/900?random=42"><img src="https://picsum.photos/120/160?random=42" alt="Thumb 2"></button>
+            <button class="thumb" data-src="https://picsum.photos/720/900?random=43"><img src="https://picsum.photos/120/160?random=43" alt="Thumb 3"></button>
+            <button class="thumb" data-src="https://picsum.photos/720/900?random=44"><img src="https://picsum.photos/120/160?random=44" alt="Thumb 4"></button>
+          </div>
+        </div>
+        <div class="pdp-info reveal delay-1">
+          <h3>Mono Atelier Jacket</h3>
+          <p class="price">₩358,000</p>
+          <p class="desc">부드러운 텍스처와 절제된 디테일을 강조한 코어 라인.</p>
+          <div class="option-group" data-option-group>
+            <button class="option-btn is-active">S</button>
+            <button class="option-btn">M</button>
+            <button class="option-btn">L</button>
+          </div>
+          <div class="option-group" data-option-group>
+            <button class="option-btn is-active">Ivory</button>
+            <button class="option-btn">Taupe</button>
+            <button class="option-btn">Charcoal</button>
+          </div>
+          <button class="btn primary" data-toast="장바구니에 담았습니다">장바구니 담기</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cta" data-mobile-cta>
+    <button class="btn primary full" data-toast="장바구니에 담았습니다">모바일 구매하기</button>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast></div>
+
+  <script src="./motion-preview.js"></script>
+</body>
+</html>

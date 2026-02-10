@@ -1,0 +1,14 @@
+:root {
+  --font-sans: {{fontSans}};
+  --font-serif: {{fontSerif}};
+  --color-bg: {{bg}};
+  --color-text: {{text}};
+  --color-muted: {{muted}};
+  --color-line: {{line}};
+  --color-accent: {{accent}};
+  --radius: {{radius}};
+  --shadow: {{shadow}};
+  --page-padding: {{pagePadding}};
+  --grid-gap: {{gridGap}};
+  --card-aspect: {{cardAspect}};
+}

@@ -1,0 +1,15 @@
+{
+  "name": "skin-factory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cafe24 responsive skin factory system",
+  "scripts": {
+    "build": "node tools/generate.js",
+    "market": "node tools/market-generator.js",
+    "thumbs": "node tools/render-thumbnails.js",
+    "build:all": "npm run build && npm run market && npm run thumbs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SKIN_NAME}} - Product Detail</title>
+  <link rel="stylesheet" href="../../assets/tokens.css">
+  <link rel="stylesheet" href="../../assets/theme.css">
+</head>
+<body
+  data-variant-id="{{VARIANT_ID}}"
+  data-header="{{HEADER_MODE}}"
+  data-grid="{{GRID_DENSITY}}"
+  data-card="{{CARD_STYLE}}"
+  data-detail-gallery="{{DETAIL_GALLERY}}"
+  data-lookbook="{{LOOKBOOK_STYLE}}"
+  data-footer="{{FOOTER_STYLE}}"
+  data-feature-cartDrawer="{{cartDrawer}}"
+  class="page-signature-motion-pdp layout-{{GRID_DENSITY}} card-{{CARD_STYLE}} footer-{{FOOTER_STYLE}}"
+>
+  <header class="xans-element- xans-layout xans-layout-header"></header>
+
+  <main class="sig-pdp-container">
+    <!-- Campaign Banner -->
+    <section class="sig-pdp-banner" data-reveal>
+      <img class="sig-pdp-banner-img" src="" alt="">
+      <div class="sig-pdp-banner-text">
+        <span>Campaign</span>
+      </div>
+    </section>
+
+    <!-- PDP Content -->
+    <div class="sig-pdp-content">
+      <div class="sig-pdp-gallery" data-reveal>
+        <div class="xans-element- xans-product xans-product-detail">
+          <div class="sig-pdp-main-img"><img class="sig-pdp-product-img" src="" alt=""></div>
+          <div class="sig-pdp-sub-imgs">
+            <img class="sig-pdp-sub-img" src="" alt="" data-idx="0">
+            <img class="sig-pdp-sub-img" src="" alt="" data-idx="1">
+          </div>
+        </div>
+      </div>
+      <div class="sig-pdp-purchase pdp-purchase sticky" data-reveal>
+        <h1 class="sig-pdp-name"></h1>
+        <p class="sig-pdp-price"></p>
+        <div class="sig-pdp-option xans-element- xans-product xans-product-option">
+          <div class="option-area"></div>
+        </div>
+        <div class="sig-pdp-actions">
+          <button class="btn-cart" type="button">장바구니</button>
+          <button class="btn-buy" type="button">바로구매</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <section class="sig-pdp-related" data-reveal>
+      <h2 class="section-title">Related</h2>
+      <div class="xans-element- xans-product xans-product-relation"></div>
+    </section>
+  </main>
+
+  <footer class="xans-element- xans-layout xans-layout-footer"></footer>
+
+  <script src="../../assets/theme.js"></script>
+  <script src="../../assets/preview.js"></script>
+  <script src="../../assets/option-enhance.js"></script>
+  <script src="../../assets/cart-drawer.js"></script>
+</body>
+</html>

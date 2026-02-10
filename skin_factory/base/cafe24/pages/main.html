@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SKIN_NAME}} - 메인</title>
+  <link rel="stylesheet" href="../../assets/tokens.css">
+  <link rel="stylesheet" href="../../assets/theme.css">
+</head>
+<body
+  data-variant-id="{{VARIANT_ID}}"
+  data-header="{{HEADER_MODE}}"
+  data-grid="{{GRID_DENSITY}}"
+  data-card="{{CARD_STYLE}}"
+  data-detail-gallery="{{DETAIL_GALLERY}}"
+  data-lookbook="{{LOOKBOOK_STYLE}}"
+  data-footer="{{FOOTER_STYLE}}"
+  class="layout-{{GRID_DENSITY}} card-{{CARD_STYLE}} footer-{{FOOTER_STYLE}}"
+>
+  <!-- xans-layout: 상단 -->
+  <div class="xans-element- xans-layout xans-layout-header">
+    <div class="container header">
+      <h1 class="logo">{{SKIN_NAME}}</h1>
+      <nav class="gnb">
+        <!-- xans-layout: 카테고리 -->
+        <div class="xans-element- xans-layout xans-layout-category"></div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- free shipping bar -->
+  <div class="feature-bar" data-feature="freeShippingBar">
+    무료배송 이벤트 안내
+  </div>
+
+  <!-- xans-product: 메인 상품 목록 -->
+  <section class="container section">
+    <h2>Products</h2>
+    <div class="xans-element- xans-product xans-product-listmain"></div>
+  </section>
+
+  <!-- xans-board: 메인 게시판 -->
+  <section class="container section">
+    <h2>Notice</h2>
+    <div class="xans-element- xans-board xans-board-list-1"></div>
+  </section>
+
+  <!-- footer -->
+  <footer class="container footer">
+    <div class="xans-element- xans-layout xans-layout-footer"></div>
+  </footer>
+
+  <script src="../../assets/theme.js"></script>
+  <script src="../../assets/cart-drawer.js"></script>
+</body>
+</html>

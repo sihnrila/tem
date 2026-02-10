@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes"/>
+<title>쇼핑몰 이름</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="swiper-bundle.min.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="framework.css">
+<link rel="stylesheet" href="theme.css">
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="theme01" id="main">
+<div id="skipNavigation">
+	<p><a href="#category">전체상품목록 바로가기</a></p>
+	<p><a href="#contents">본문 바로가기</a></p>
+</div>
+<div id="wrap">
+
+<header id="header" class="header">
+	<div class="inner">
+		<div class="top_nav_box ko-font" id="top_nav_box">
+			<div class="top_logo">
+				<a href="index.html">
+					<span class="logo" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#fff;">SHOP NAME</span><span class="logo_b" style="font-size:18px;font-weight:700;letter-spacing:0.15em;color:#111;">SHOP NAME</span>
+				</a>
+			</div>
+			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
+
+			<div>
+				<div class="top_category RW en-font">
+					<ul id="category-list-container">
+						<li class="cate__li">
+							<a href="about.html">COMPANY</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="about.html">인사말</a></li>
+									<li><a href="about.html">연혁</a></li>
+									<li><a href="contact.html">오시는길</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="cate__li">
+							<a href="list.html">SHOP</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="new-arrivals.html">New Arrivals</a></li>
+									<li><a href="list.html">All Products</a></li>
+									<li><a href="sale.html">Sale</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="cate01">
+							<a href="archive.html" style="position:relative;">STORY</a>
+						</li>
+						<li>
+							<a href="review.html">REVIEW</a>
+						</li>
+						<li class="cate__li">
+							<a href="community.html">COMMUNITY</a>
+							<div class="navi_bg">
+								<ul class="sub_cate01">
+									<li><a href="notice.html">새소식</a></li>
+									<li><a href="faq.html">자주하는질문들</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="top_mypage">
+				<li class="top_search RW"><a href="javascript:;" class="eSearch"><i class="uil uil-search"></i></a></li>
+				<li class="RW"><a href="login.html"><i class="uil uil-user"></i></a></li>
+				<li><a href="cart.html"><i class="uil uil-shopping-bag"></i><span class="basket__count">( 0 )</span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<!-- 사이드 네비게이션 -->
+<aside id="aside">
+	<nav class="navigation-menu" role="navigation">
+		<div class="navigation_state">
+			<a href="login.html">회원가입</a>
+			<a href="login.html">로그인</a>
+			<a href="mypage.html">주문조회</a>
+			<a href="mypage.html">최근본상품</a>
+		</div>
+		<div id="slideCateList" class="navigation-menu__category">
+			<ul class="categoryList">
+				<li class="txt_menu">
+					<a href="list.html">SHOP</a>
+					<ul>
+						<li><a href="new-arrivals.html">New Arrivals</a></li>
+						<li><a href="list.html">All Products</a></li>
+						<li><a href="sale.html">Sale</a></li>
+					</ul>
+				</li>
+				<li class="txt_menu">
+					<a href="about.html">COMPANY</a>
+					<ul>
+						<li><a href="about.html">브랜드소개</a></li>
+						<li><a href="about.html">연혁</a></li>
+						<li><a href="contact.html">오시는길</a></li>
+					</ul>
+				</li>
+				<li><a href="archive.html">STORY</a></li>
+				<li class="txt_menu">
+					<a href="community.html">COMMUNITY</a>
+					<ul>
+						<li><a href="notice.html">새소식</a></li>
+						<li><a href="review.html">사용후기</a></li>
+						<li><a href="faq.html">자주하는질문들</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="side__bottom">
+			<div class="side-sns">
+				<a href="https://www.instagram.com" target="_blank">instagram</a>
+				<a href="https://www.youtube.com" target="_blank">youtube</a>
+			</div>
+			<div style="line-height:1.5;font-size:12px">에스엠이 멤버가 되어 최고의 제품과 감성을 만나보세요.<br>© 에스엠이웹에이젼시</div>
+		</div>
+		<button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i>닫기</button>
+	</nav>
+</aside>
+
+
+<div id="container">
+	<div id="contents">
+
+<!-- ===== 메인 동영상 섹션 ===== -->
+<div class="movie-wrapper">
+	<video src="https://www.pexels.com/ko-kr/download/video/7871224/" style="border:none;" autoplay loop muted playsinline loading="lazy"></video>
+</div>
+
+<!-- ===== 메인 상품 섹션 1 (Hydra Firming Toner) ===== -->
+<div class="page-content position-relative">
+
+<section class="big-section pb-0" style="overflow:hidden;" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-start justify-content-center" style="margin-left:-30px;margin-right:-30px">
+			<div class="col-12 col-lg-10 md-ps-30px md-pe-30px md-mb-30px main-tit wow animate__fadeIn" style="position:relative;">
+				<div class="product-img-hover position-relative">
+					<div class="main__product__txt">
+						<h2 style="color:#000">Hydra Firming Toner</h2>
+					</div>
+					<div class="main__product__img">
+						<img src="images/1.png" alt="하이드라 퍼밍 토너" style="width:100%">
+					</div>
+				</div>
+				<div class="main__product__txt__01">
+					<h2 style="color:#000">하이드라 퍼밍 토너</h2>
+					<h4 style="color:#000">푸석푸석해진 피부에 보습력 영양감을 부여하는 수분탄력 토너</h4>
+					<p style="color:#000">135 ml / 4.56 FL. OZ.</p>
+					<p class="price" style="color:#000">￦59,000</p>
+					<a href="detail.html">SHOP NOW</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== 상품 그리드 1 (4컬럼) ===== -->
+<section class="big-section" style="overflow:hidden;" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-start justify-content-center" style="margin-left:-30px;margin-right:-30px">
+			<div class="col-12 col-lg-12 text-center md-ps-30px md-pe-30px md-mb-30px main-tit" style="position:relative;">
+				<div class="ec-base-product">
+					<ul class="prdList grid4">
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/3.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/3.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/4.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/4.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">5,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">5,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/5.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/5.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/6.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/6.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">45,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">25,000원</span> <span style="color:var(--point-color);font-weight:bold;">44%</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ===== 카테고리 텍스트 배너 ===== -->
+<section class="overflow-hidden background-position-center-top position-relative main-category threeD-letter-menu d-flex align-items-center" data-background="#ff3901" style="background:#000000;padding:60px 0;">
+	<div class="container section">
+		<div class="row align-items-center justify-content-center h-100">
+			<div class="col-xl-12 p-0 position-relative">
+				<div class="row align-items-center position-relative z-index-9" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 40px;">
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Cleansing</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Toner</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Serum</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Cream</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Essence</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Maskpack</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Lipcare</span>
+					</a>
+					<a href="list.html" class="menu-item-text" style="font-size:clamp(50px,10vw,150px);line-height:1;color:#fff;text-decoration:none;font-weight:500;letter-spacing:-4px;">
+						<span class="title">Suncare</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== 메인 상품 섹션 2 (Hydra Cleansing Foam) ===== -->
+<section class="" style="overflow:hidden;" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-start justify-content-center" style="margin-left:-30px;margin-right:-30px">
+			<div class="col-12 col-lg-10 text-right md-text-left md-ps-30px md-pe-30px md-mb-30px main-tit" style="position:relative;">
+				<div class="product-img-hover position-relative">
+					<div class="main__product__txt">
+						<h2 style="color:#000">Hydra Cleansing Foam</h2>
+					</div>
+					<div class="main__product__img">
+						<img src="images/2.png" alt="하이드라 클렌징 폼" style="width:100%">
+					</div>
+				</div>
+				<div class="main__product__txt__01">
+					<h2 style="color:#000">하이드라 클렌징 폼</h2>
+					<h4 style="color:#000">쫀쫀한 고밀도 미세 버블이 불필요한 피부 각질과 노폐물을 말끔하게 제거해주는 아미노산 딥 클렌징 폼</h4>
+					<p style="color:#000">150 ml / 5.07 FL. OZ.</p>
+					<p class="price" style="color:#000">￦65,000</p>
+					<a href="detail.html">SHOP NOW</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== 상품 그리드 2 (4컬럼) ===== -->
+<section class="big-section pb-0" style="overflow:hidden;" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-start justify-content-center" style="margin-left:-30px;margin-right:-30px">
+			<div class="col-12 col-lg-12 text-center md-ps-30px md-pe-30px md-mb-30px main-tit" style="position:relative;">
+				<div class="ec-base-product">
+					<ul class="prdList grid4">
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/7.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/7.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/8.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/8.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">45,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">25,000원</span> <span style="color:var(--point-color);font-weight:bold;">44%</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/9.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/9.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+<li class="xans-record-">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/10.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/10.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">5,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">5,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ===== 3컬럼 이미지+텍스트 (주석처리) =====
+<section class="" style="overflow:hidden; margin-bottom: 40px;" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-start justify-content-center" style="margin-left:-30px;margin-right:-30px;display:flex;flex-wrap:wrap;">
+			<div class="col-12 col-lg-4 text-center md-ps-30px md-pe-30px md-mb-30px main-tit wow animate__fadeIn" style="position:relative;flex:1;min-width:280px;padding:0 15px;">
+				<div class="img-hover border-radius-20px" style="border-radius:20px;overflow:hidden;">
+					<a href="list.html"><img src="images/3.png" alt="토너" style="width:100%;display:block;"></a>
+				</div>
+				<div class="main__3col__txt">
+					<h2>Hydra Firming Toner</h2>
+					<p>수분 가득, 탄력 넘치는 피부를 위한 보습 토너</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4 text-center md-ps-30px md-pe-30px md-mb-30px main-tit wow animate__fadeIn" style="position:relative;flex:1;min-width:280px;padding:0 15px;">
+				<div class="img-hover border-radius-20px" style="border-radius:20px;overflow:hidden;">
+					<a href="list.html"><img src="images/4.png" alt="크림" style="width:100%;display:block;"></a>
+				</div>
+				<div class="main__3col__txt">
+					<h2>Hydra Firming Cream</h2>
+					<p>깊은 보습과 탄력을 동시에 잡아주는 수분 크림</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4 text-center md-ps-30px md-pe-30px md-mb-30px main-tit wow animate__fadeIn" style="position:relative;flex:1;min-width:280px;padding:0 15px;">
+				<div class="img-hover border-radius-20px" style="border-radius:20px;overflow:hidden;">
+					<a href="list.html"><img src="images/5.png" alt="세럼" style="width:100%;display:block;"></a>
+				</div>
+				<div class="main__3col__txt">
+					<h2>Hydra Firming Serum</h2>
+					<p>고농축 보습 에센스로 촉촉한 피부 컨디셔닝</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+===== -->
+
+
+<!-- ===== 텍스트 배너 섹션 ===== -->
+<section class="position-relative overflow-hidden" data-background="#ebe3d6" style="background:#bcbec6;overflow:hidden; margin-bottom: 40px;">
+	<div class="container section">
+		<div class="row align-items-center justify-content-center one-half-screen sm-h-200px" style="min-height:50vh;display:flex;align-items:center;justify-content:center;">
+			<div class="col-12">
+				<span class="fancy-text-style-4">
+					<span class="fs-130 xl-fs-110 lg-fs-90 md-fs-80 xs-fs-60 fs-500 mb-0 text-dark-gray fw-300 d-block" style="font-size:clamp(40px,9vw,130px);font-weight:300;color:#333;line-height:1.1;">Great design made <br><span class="fw-600" style="font-weight:600;" id="fancyText">affordable</span> for you.</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ===== 상품 슬라이더 (Swiper) ===== -->
+<section class="big-section overflow-hidden pt-0" data-background="#fff">
+	<div class="container section">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-lg-12 swiper__box" style="position:relative">
+				<div class="ec-base-product">
+					<div class="swiper mainSwiper">
+						<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/6.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/6.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">45,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">25,000원</span> <span style="color:var(--point-color);font-weight:bold;">44%</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="swiper-slide">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/7.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/7.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="swiper-slide">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/8.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img">
+				<img src="images/8.png" alt="하이드라 퍼밍 토너" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 토너</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">135 ml / 4.56 FL. OZ.</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">89,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="swiper-slide">
+	<div class="prdList__item" style="position:relative">
+		<div class="thumbnail position-relative">
+			<a href="detail.html">
+				<img src="images/9.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img">
+				<img src="images/9.png" alt="하이드라 퍼밍 크림" loading="lazy" class="product-list-img_on">
+			</a>
+			<div class="icon__box">
+				<span class="wish">WISH</span>
+				<span class="cart">CART</span>
+			</div>
+		</div>
+		<div class="description">
+			<div class="name"><a href="detail.html"><span style="font-size:13px;color:#000000;">하이드라 퍼밍 크림</span></a></div>
+			<ul class="spec">
+				<li><span style="font-size:12px;color:#333333;">100 ml / 3.38 FL. OZ.</span></li>
+				<li><span style="font-size:12px;color:#AAAAAA;text-decoration:line-through;">5,000원</span></li>
+				<li><span style="font-size:13px;color:#000000;font-weight:bold;">5,000원</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+						</div>
+						<div class="swiper-button-next swiper-button-next-nav01"></div>
+						<div class="swiper-button-prev swiper-button-prev-nav01"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</div><!-- //page-content -->
+
+	</div><!-- //contents -->
+</div><!-- //container -->
+
+<!-- 하단 모바일 네비게이션 -->
+<div class="bottom-nav RMB RTB">
+	<ul class="bottom-nav__tabBar">
+		<li><button type="button" class="btnNav eNavFold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-width="1.5" d="M3 6h18M3 12h18M3 18h18"/></svg><span>네비게이션</span></button></li>
+		<li><button type="button" class="btnSearch eSearch"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"/><path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"/></svg><span>검색</span></button></li>
+		<li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-width="1.5" d="M12 3L2 11.36V22h7.692v-7.6h4.616V22H22V11.36L12 3z"/></svg><span>홈</span></a></li>
+		<li><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74z"/></svg><span>Cart <em class="count">0</em></span></a></li>
+		<li><a href="mypage.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"/><path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"/></svg><span>마이쇼핑</span></a></li>
+	</ul>
+	<div class="bottom-nav__top">
+		<a href="#wrap" title="화면 최상단으로 이동하기"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="20" fill="#1a1a1a" viewBox="0 0 14 20" class="icon"><path d="M3,8.4C2.3,9,1.2,9,0.5,8.3c-0.6-0.7-0.6-1.7,0-2.4l5.3-5.2C6.5,0,7.6,0,8.3,0.7l5.2,5.1c0.7,0.7,0.7,1.8,0,2.5c-0.7,0.7-1.8,0.7-2.4,0L8.8,6.1l0,12.1c0,2.3-3.6,2.3-3.6,0l0-12L3,8.4z"/></svg></a>
+	</div>
+</div>
+
+
+<div class="footer_margin"></div>
+
+<footer id="footer" class="layout1">
+	<div class="inner">
+		<div class="footer-row alt-font">
+			<div class="bt_info">
+				<h2>Address</h2>
+				<span class="tit">상호명</span> <span class="tit">CEO</span><br>
+				<span class="tit">사업장 주소</span>
+				<span class="tit">대표 전화</span><br>
+				<span class="tit">사업자 등록번호</span>
+				<span class="tit">통신판매업 신고번호</span><br>
+				<span class="tit">개인정보보호책임자</span>
+			</div>
+
+			<div class="bt_info">
+				<h2>Link</h2>
+				<div class="util__area">
+					<a href="about.html">COMPANY</a>
+					<a href="#">AGREEMENT</a>
+					<a href="#">PRIVACY POLICY</a>
+					<a href="faq.html">GUIDE</a>
+				</div>
+			</div>
+
+			<div class="bt_info">
+				<h2>Info</h2>
+			</div>
+
+			<div style="font-size:12px" class="sns__btn">
+				<a href="https://instagram.com/" target="_blank"><i class="uil uil-instagram icon-small"></i></a>
+			</div>
+		</div>
+		<div class="copy__area text-right">
+			<span class="bt_copyright alt-font">© 쇼핑몰 이름 2024. <a href="https://www.smewa.com" target="_blank">Design by SME</a></span>
+		</div>
+	</div>
+</footer>
+
+<!-- 검색 오버레이 -->
+<div class="xans-layout-searchheader" id="searchOverlay" style="display:none;">
+	<div class="title alt-font">SEARCH</div>
+	<fieldset>
+		<legend>검색</legend>
+		<input type="text" class="inputTypeText" placeholder="검색어를 입력하세요">
+		<button type="button" class="btnSearch">검색</button>
+	</fieldset>
+	<button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i></button>
+</div>
+
+</div><!-- //wrap -->
+
+<div class="layer_shadow" id="layer_shadow"></div>
+
+<script>
+/* ===== 헤더 고정/스크롤 효과 ===== */
+(function(){
+	var header = document.getElementById('header');
+	if(!header) return;
+	window.addEventListener('scroll', function(){
+		if(window.scrollY > 100){
+			header.classList.add('fixed');
+		} else {
+			header.classList.remove('fixed');
+		}
+	});
+})();
+
+/* ===== 네비게이션 토글 ===== */
+(function(){
+	var navBtns = document.querySelectorAll('.eNavFold');
+	var aside = document.getElementById('aside');
+	var layer = document.getElementById('layer_shadow');
+	var closeBtns = document.querySelectorAll('.btnClose');
+
+	function openNav(){ 
+		if(aside) aside.classList.add('on');
+		if(layer) layer.classList.add('on');
+	}
+	function closeNav(){
+		if(aside) aside.classList.remove('on');
+		if(layer) layer.classList.remove('on');
+	}
+
+	navBtns.forEach(function(btn){ btn.addEventListener('click', openNav); });
+	closeBtns.forEach(function(btn){ btn.addEventListener('click', closeNav); });
+	if(layer) layer.addEventListener('click', closeNav);
+})();
+
+/* ===== 카테고리 호버 ===== */
+(function(){
+	var cateItems = document.querySelectorAll('.cate__li');
+	cateItems.forEach(function(item){
+		item.addEventListener('mouseenter', function(){
+			this.classList.add('on');
+		});
+		item.addEventListener('mouseleave', function(){
+			this.classList.remove('on');
+		});
+	});
+})();
+
+/* ===== Swiper 초기화 ===== */
+</script>
+<script src="swiper-bundle.min.js"></script>
+<script>
+console.log('Swiper available:', typeof Swiper);
+var swiperEl = document.querySelector('.mainSwiper');
+console.log('Swiper element:', swiperEl);
+console.log('Swiper wrapper:', swiperEl ? swiperEl.querySelector('.swiper-wrapper') : null);
+console.log('Slides count:', swiperEl ? swiperEl.querySelectorAll('.swiper-slide').length : 0);
+var mainSwiper = new Swiper('.mainSwiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	loop: true,
+	speed: 4000,
+	freeMode: true,
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false,
+	},
+	observer: true,
+	observeParents: true,
+	navigation: {
+		nextEl: '.swiper-button-next-nav01',
+		prevEl: '.swiper-button-prev-nav01',
+	},
+	breakpoints: {
+		640: { slidesPerView: 2, spaceBetween: 20 },
+		1024: { slidesPerView: 3, spaceBetween: 20 },
+		1400: { slidesPerView: 4, spaceBetween: 20 },
+	}
+});
+console.log('Swiper instance:', mainSwiper);
+console.log('Swiper slides:', mainSwiper.slides ? mainSwiper.slides.length : 'no slides');
+console.log('Swiper initialized:', mainSwiper.initialized);
+console.log('Wrapper el:', mainSwiper.wrapperEl);
+console.log('Slide width:', mainSwiper.slides && mainSwiper.slides[0] ? mainSwiper.slides[0].style.width : 'n/a');
+
+/* ===== Fancy Text Animation ===== */
+(function(){
+	var words = ['affordable', 'simple', 'creative'];
+	var el = document.getElementById('fancyText');
+	if(!el) return;
+	var idx = 0;
+	setInterval(function(){
+		idx = (idx + 1) % words.length;
+		el.style.opacity = 0;
+		setTimeout(function(){
+			el.textContent = words[idx];
+			el.style.opacity = 1;
+		}, 300);
+	}, 2500);
+	el.style.transition = 'opacity 0.3s ease';
+})();
+
+/* ===== GSAP Scroll Animations ===== */
+(function(){
+	if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.utils.toArray('.main-tit').forEach(function(el){
+		gsap.from(el, {
+			y: 50,
+			opacity: 0,
+			duration: 0.8,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: el,
+				start: 'top 85%',
+				toggleActions: 'play none none none'
+			}
+		});
+	});
+})();
+</script>
+</body>
+</html>

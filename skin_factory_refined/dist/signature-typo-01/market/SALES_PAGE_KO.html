@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNATURE TYPO LUXURY 01 — Sales Page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    body { font-family: "Noto Sans KR", system-ui, sans-serif; color: #111; background: #fff; line-height: 1.6; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .sales-hero { padding: 100px 0 60px; text-align: center; }
+    .sales-hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.02em; }
+    .sales-hero .pitch { margin-top: 12px; font-size: 16px; color: #777; }
+    .price-tag { display: inline-flex; gap: 16px; margin-top: 20px; font-size: 14px; }
+    .price-tag .launch { font-weight: 600; }
+    .price-tag .regular { color: #999; text-decoration: line-through; }
+
+    /* Section */
+    .section { padding: 64px 0; }
+    .section-title { text-align: center; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+    .section-sub { text-align: center; font-size: 14px; color: #777; margin-top: 8px; }
+
+    /* Demo Comparison */
+    .demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+    .demo-card { border: 1px solid #eaeaea; border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .demo-card:hover { transform: scale(1.02); box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+    .demo-card img { width: 100%; height: auto; display: block; }
+    .demo-card-body { padding: 20px; }
+    .demo-card-body h3 { font-size: 16px; font-weight: 600; letter-spacing: 0.04em; }
+    .demo-card-body p { font-size: 13px; color: #777; margin-top: 6px; }
+
+    /* Closing statement */
+    .closing { text-align: center; padding: 48px 0 24px; font-family: "Noto Serif KR", serif; font-size: clamp(18px, 3vw, 26px); line-height: 1.5; }
+
+    /* Features */
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .feature-item { border: 1px solid #eaeaea; border-radius: 10px; padding: 18px; font-size: 13px; }
+    .feature-item strong { display: block; margin-bottom: 4px; font-size: 14px; }
+
+    /* Positioning */
+    .positioning { text-align: center; padding: 48px 0; font-size: 14px; color: #777; }
+    .positioning strong { color: #111; }
+
+    /* Footer */
+    .sales-footer { text-align: center; padding: 32px 0; border-top: 1px solid #eaeaea; font-size: 12px; color: #999; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .demo-grid { grid-template-columns: 1fr; overflow-x: auto; scroll-snap-type: x mandatory; display: flex; gap: 16px; padding-bottom: 8px; }
+      .demo-card { min-width: 85vw; scroll-snap-align: start; flex-shrink: 0; }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="sales-hero">
+    <div class="container">
+      <h1>Signature Typo Luxury</h1>
+      <p class="pitch">Typography-first ultra refined commerce</p>
+      <div class="price-tag">
+        <span class="launch">CORE — 350,000 KRW</span>
+        <span class="regular">390,000 KRW</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">3 Brand Mood Examples Included</h2>
+      <p class="section-sub">Same structure. Different identity.</p>
+      <div class="demo-grid">
+        <div class="demo-card">
+          <img src="../brand-archive-studio/marketing/demo_home.png" alt="Archive Studio Demo">
+          <div class="demo-card-body">
+            <h3>ARCHIVE STUDIO</h3>
+            <p>Bright studio minimal. Structured and refined.</p>
+          </div>
+        </div>
+        <div class="demo-card">
+          <img src="../brand-silent-form/marketing/demo_home.png" alt="Silent Form Demo">
+          <div class="demo-card-body">
+            <h3>SILENT FORM</h3>
+            <p>Muted neutral tone. Calm and restrained.</p>
+          </div>
+        </div>
+        <div class="demo-card">
+          <img src="../brand-mono-house/marketing/demo_home.png" alt="Mono House Demo">
+          <div class="demo-card-body">
+            <h3>MONO HOUSE</h3>
+            <p>Typography-driven layout. Graphic minimal mood.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="closing container">
+    One structure. Three identities.<br>
+    Designed to adapt to your brand direction.
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Core Features</h2>
+      <div class="feature-grid">
+        <div class="feature-item"><strong>Option Button UI</strong>select를 버튼 UI로 변환, change 이벤트 유지</div>
+        <div class="feature-item"><strong>Mobile Sticky CTA</strong>모바일 하단 고정 구매 버튼, 카트 드로어 충돌 방지</div>
+        <div class="feature-item"><strong>Cart Drawer</strong>/order/basket.html fetch + 안전 폴백</div>
+        <div class="feature-item"><strong>Responsive</strong>데스크탑 4컬럼 / 모바일 1컬럼 자동 전환</div>
+        <div class="feature-item"><strong>PDP Sticky Purchase</strong>데스크탑 우측 고정 구매 패널</div>
+        <div class="feature-item"><strong>Clean Module</strong>xans-* 모듈 기반, 하드코딩 없음</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="positioning container">
+    <strong>Designed for fashion brands seeking refined structure.</strong><br>
+    CORE line — 350,000 KRW (launch) &nbsp;|&nbsp; Regular — 390,000 KRW
+  </div>
+
+  <footer class="sales-footer">
+    <div class="container">© 2026 Kokorocu Studio. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

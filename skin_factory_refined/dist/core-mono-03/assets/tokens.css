@@ -1,0 +1,14 @@
+:root {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-muted: #777777;
+  --color-line: #eaeaea;
+  --color-accent: #eaeaea;
+  --radius: 10px;
+  --shadow: 0 6px 16px rgba(0,0,0,0.06);
+  --page-padding: 20px;
+  --grid-gap: 12px;
+  --card-aspect: 1/1;
+}

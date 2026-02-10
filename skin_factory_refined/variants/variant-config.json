@@ -1,0 +1,431 @@
+[
+  {
+    "id": "core-mono-01",
+    "name": "CORE — MONO 01",
+    "desc": "White base, transparent header, roomy grid, classic cards",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#7a7a7a",
+      "line": "#eeeeee",
+      "accent": "#111111",
+      "radius": "12px",
+      "shadow": "0 10px 24px rgba(0,0,0,0.08)",
+      "pagePadding": "32px",
+      "gridGap": "28px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "transparent",
+      "gridDensity": "roomy",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Mono 01",
+      "subtitle": "Quiet structure for editorial commerce",
+      "keywords": ["white", "roomy", "classic"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/fdbbbda90b2296546bbe12d7e22f2b09.jpg"
+    }
+  },
+  {
+    "id": "core-mono-02",
+    "name": "CORE — MONO 02",
+    "desc": "Soft grey base, sticky header, image-heavy cards",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#f7f7f7",
+      "text": "#111111",
+      "muted": "#6f6f6f",
+      "line": "#e6e6e6",
+      "accent": "#111111",
+      "radius": "14px",
+      "shadow": "0 12px 28px rgba(0,0,0,0.10)",
+      "pagePadding": "28px",
+      "gridGap": "20px",
+      "cardAspect": "3/4"
+    },
+    "layout": {
+      "headerMode": "sticky",
+      "gridDensity": "normal",
+      "cardStyle": "imageHeavy",
+      "detailGallery": "mixed",
+      "lookbookStyle": "masonry",
+      "footerStyle": "brandDense"
+    },
+    "features": {
+      "freeShippingBar": true,
+      "reviewHighlight": true,
+      "cartDrawer": true,
+      "trustBadges": false
+    },
+    "marketing": {
+      "conceptTitle": "Mono 02",
+      "subtitle": "Soft tones with visual product focus",
+      "keywords": ["soft", "image", "editorial"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/10/baf89d1ce87988ca7a3f2a7876abde35.jpg"
+    }
+  },
+  {
+    "id": "core-mono-03",
+    "name": "CORE — MONO 03",
+    "desc": "White base with subtle accent, dense grid, info-dense cards",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#777777",
+      "line": "#eaeaea",
+      "accent": "#eaeaea",
+      "radius": "10px",
+      "shadow": "0 6px 16px rgba(0,0,0,0.06)",
+      "pagePadding": "20px",
+      "gridGap": "12px",
+      "cardAspect": "1/1"
+    },
+    "layout": {
+      "headerMode": "compact",
+      "gridDensity": "dense",
+      "cardStyle": "infoDense",
+      "detailGallery": "mixed",
+      "lookbookStyle": "splitStory",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Mono 03",
+      "subtitle": "Compact information hierarchy for fast scanning",
+      "keywords": ["compact", "dense", "neutral"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/01/09/5eb243e61be825b9ab09694c02d04512.jpg"
+    }
+  },
+  {
+    "id": "editorial-type-01",
+    "name": "EDITORIAL TYPE 01",
+    "desc": "Typography-first hero with minimal editorial grid",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#7a7a7a",
+      "line": "#eaeaea",
+      "accent": "#111111",
+      "radius": "10px",
+      "shadow": "0 10px 24px rgba(0,0,0,0.08)",
+      "pagePadding": "32px",
+      "gridGap": "28px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "transparent",
+      "gridDensity": "normal",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Editorial Type 01",
+      "subtitle": "Typography-first layout for refined commerce",
+      "keywords": ["editorial", "type", "minimal"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/02/01/2b0c3d3c8f3a9f2a2a0f9b2a60e62a2b.jpg"
+    }
+  },
+  {
+    "id": "editorial-type-02",
+    "name": "EDITORIAL TYPE 02",
+    "desc": "Expanded spacing with split editorial sections",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#7a7a7a",
+      "line": "#e6e6e6",
+      "accent": "#111111",
+      "radius": "12px",
+      "shadow": "0 12px 28px rgba(0,0,0,0.10)",
+      "pagePadding": "40px",
+      "gridGap": "32px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "sticky",
+      "gridDensity": "roomy",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "brandDense"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": true,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Editorial Type 02",
+      "subtitle": "Split editorial rhythm with generous whitespace",
+      "keywords": ["spacious", "split", "premium"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/02/01/9b8b0c3f2a2e4f1d8d2e98b3d0a0c2f1.jpg"
+    }
+  },
+  {
+    "id": "editorial-type-03",
+    "name": "EDITORIAL TYPE 03",
+    "desc": "Dark editorial tone with compact grid and accent motion",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#0e0e10",
+      "text": "#f2f2f2",
+      "muted": "#a3a3a3",
+      "line": "#1f1f22",
+      "accent": "#eaeaea",
+      "radius": "10px",
+      "shadow": "0 6px 16px rgba(0,0,0,0.25)",
+      "pagePadding": "28px",
+      "gridGap": "20px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "compact",
+      "gridDensity": "dense",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Editorial Type 03",
+      "subtitle": "Dark palette with controlled editorial motion",
+      "keywords": ["dark", "minimal", "type"],
+      "backgroundImage": "https://ecudemo387382.cafe24.com/web/upload/category/editor/2026/02/01/1f2c3b4a5d6e7f8190a1b2c3d4e5f607.jpg"
+    }
+  },
+  {
+    "id": "brand-archive-studio",
+    "name": "ARCHIVE STUDIO",
+    "desc": "Structured minimal studio brand — bright beige/white, refined calm",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#111111",
+      "muted": "#777777",
+      "line": "#f3f1ed",
+      "accent": "#111111",
+      "radius": "12px",
+      "shadow": "0 10px 24px rgba(0,0,0,0.06)",
+      "pagePadding": "32px",
+      "gridGap": "28px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "transparent",
+      "gridDensity": "roomy",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Archive Studio",
+      "subtitle": "Structured minimal studio brand",
+      "keywords": ["structured", "studio", "beige"],
+      "backgroundImage": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
+    }
+  },
+  {
+    "id": "brand-silent-form",
+    "name": "SILENT FORM",
+    "desc": "Muted neutral minimal label — introspective weighted tone",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#efefef",
+      "text": "#111111",
+      "muted": "#666666",
+      "line": "#d9d7d2",
+      "accent": "#111111",
+      "radius": "10px",
+      "shadow": "0 8px 20px rgba(0,0,0,0.08)",
+      "pagePadding": "28px",
+      "gridGap": "24px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "sticky",
+      "gridDensity": "normal",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "brandDense"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": true,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Silent Form",
+      "subtitle": "Muted neutral minimalism with intention",
+      "keywords": ["muted", "neutral", "intention"],
+      "backgroundImage": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1600&q=80"
+    }
+  },
+  {
+    "id": "brand-mono-house",
+    "name": "MONO HOUSE",
+    "desc": "Typography-first graphic minimal brand — pure black/white contrast",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#000000",
+      "muted": "#666666",
+      "line": "#eaeaea",
+      "accent": "#000000",
+      "radius": "6px",
+      "shadow": "0 6px 16px rgba(0,0,0,0.10)",
+      "pagePadding": "24px",
+      "gridGap": "16px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "compact",
+      "gridDensity": "dense",
+      "cardStyle": "infoDense",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Mono House",
+      "subtitle": "Typography-first graphic minimal commerce",
+      "keywords": ["contrast", "graphic", "type"],
+      "backgroundImage": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80"
+    }
+  },
+  {
+    "id": "signature-motion-01",
+    "name": "SIGNATURE MOTION 01",
+    "desc": "Image-heavy campaign storytelling with refined dynamic motion",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#ffffff",
+      "text": "#0a0a0a",
+      "muted": "#666666",
+      "line": "#e0e0e0",
+      "accent": "#0a0a0a",
+      "radius": "14px",
+      "shadow": "0 16px 40px rgba(0,0,0,0.12)",
+      "pagePadding": "32px",
+      "gridGap": "24px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "transparent",
+      "gridDensity": "normal",
+      "cardStyle": "imageHeavy",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "brandDense"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Signature Motion",
+      "subtitle": "Campaign storytelling with dynamic refinement",
+      "keywords": ["motion", "campaign", "premium"],
+      "backgroundImage": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1600&q=80"
+    }
+  },
+  {
+    "id": "signature-typo-01",
+    "name": "SIGNATURE TYPO LUXURY 01",
+    "desc": "Typography-first luxury layout with ultra refined calm",
+    "tokens": {
+      "fontSans": "\"Noto Sans KR\", sans-serif",
+      "fontSerif": "\"Noto Serif KR\", serif",
+      "bg": "#faf9f6",
+      "text": "#111111",
+      "muted": "#8a8a8a",
+      "line": "#e8e6e1",
+      "accent": "#111111",
+      "radius": "8px",
+      "shadow": "0 4px 12px rgba(0,0,0,0.04)",
+      "pagePadding": "40px",
+      "gridGap": "32px",
+      "cardAspect": "4/5"
+    },
+    "layout": {
+      "headerMode": "transparent",
+      "gridDensity": "roomy",
+      "cardStyle": "classic",
+      "detailGallery": "leftThumb",
+      "lookbookStyle": "editorial",
+      "footerStyle": "minimal"
+    },
+    "features": {
+      "freeShippingBar": false,
+      "reviewHighlight": false,
+      "cartDrawer": true,
+      "trustBadges": true
+    },
+    "marketing": {
+      "conceptTitle": "Signature Typo Luxury",
+      "subtitle": "Typography-first ultra refined commerce",
+      "keywords": ["typography", "luxury", "calm"],
+      "backgroundImage": "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1600&q=80"
+    }
+  }
+]

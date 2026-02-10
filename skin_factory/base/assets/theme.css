@@ -1,0 +1,59 @@
+body {
+  font-family: var(--font-sans, "Noto Sans KR", sans-serif);
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #111);
+  padding: var(--page-padding, 24px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.feature-bar {
+  display: none;
+  background: var(--color-accent, #111);
+  color: #fff;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 12px;
+}
+
+body[data-feature-freeShippingBar="true"] .feature-bar {
+  display: block;
+}
+
+.pdp {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--grid-gap, 24px);
+}
+
+.pdp-purchase.sticky {
+  position: sticky;
+  top: 80px;
+}
+
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid var(--color-line, #eee);
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .pdp {
+    grid-template-columns: 1fr;
+  }
+  .mobile-cta {
+    display: block;
+  }
+}

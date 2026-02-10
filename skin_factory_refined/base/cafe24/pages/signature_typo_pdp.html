@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SKIN_NAME}} - Product Detail</title>
+  <link rel="stylesheet" href="../../assets/tokens.css">
+  <link rel="stylesheet" href="../../assets/theme.css">
+</head>
+<body
+  data-variant-id="{{VARIANT_ID}}"
+  data-header="{{HEADER_MODE}}"
+  data-grid="{{GRID_DENSITY}}"
+  data-card="{{CARD_STYLE}}"
+  data-detail-gallery="{{DETAIL_GALLERY}}"
+  data-lookbook="{{LOOKBOOK_STYLE}}"
+  data-footer="{{FOOTER_STYLE}}"
+  data-feature-cartDrawer="{{cartDrawer}}"
+  class="page-signature-typo-pdp layout-{{GRID_DENSITY}} card-{{CARD_STYLE}} footer-{{FOOTER_STYLE}}"
+>
+  <header class="xans-element- xans-layout xans-layout-header"></header>
+
+  <main class="typo-pdp-container">
+    <!-- Typo PDP Hero -->
+    <section class="typo-pdp-hero" data-reveal>
+      <h1 class="typo-pdp-hero-title"></h1>
+      <p class="typo-pdp-hero-sub">FW 2025 — Limited Edition</p>
+    </section>
+
+    <!-- PDP Content -->
+    <div class="typo-pdp-content">
+      <div class="typo-pdp-gallery" data-reveal>
+        <div class="xans-element- xans-product xans-product-detail">
+          <div class="typo-pdp-main-img"><img class="typo-pdp-product-img" src="" alt=""></div>
+        </div>
+      </div>
+
+      <!-- Spec inline -->
+      <div class="typo-pdp-spec" data-reveal>
+        <div class="typo-spec-row"><span class="typo-spec-label">Fabric</span><span class="typo-spec-value">Cotton 100%</span></div>
+        <div class="typo-spec-row"><span class="typo-spec-label">Fit</span><span class="typo-spec-value">Relaxed Oversized</span></div>
+        <div class="typo-spec-row"><span class="typo-spec-label">Season</span><span class="typo-spec-value">FW 2025</span></div>
+      </div>
+
+      <div class="typo-pdp-purchase pdp-purchase sticky" data-reveal>
+        <p class="typo-pdp-price"></p>
+        <div class="typo-pdp-option xans-element- xans-product xans-product-option">
+          <div class="option-area"></div>
+        </div>
+        <div class="typo-pdp-actions">
+          <button class="btn-cart" type="button">장바구니</button>
+          <button class="btn-buy" type="button">바로구매</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial Quote -->
+    <section class="typo-pdp-quote" data-reveal>
+      <blockquote>&ldquo;Less, with intention.&rdquo;</blockquote>
+    </section>
+
+    <!-- Related -->
+    <section class="typo-pdp-related" data-reveal>
+      <h2 class="section-title">You may also like</h2>
+      <div class="xans-element- xans-product xans-product-relation"></div>
+    </section>
+  </main>
+
+  <footer class="xans-element- xans-layout xans-layout-footer"></footer>
+
+  <script src="../../assets/theme.js"></script>
+  <script src="../../assets/preview.js"></script>
+  <script src="../../assets/option-enhance.js"></script>
+  <script src="../../assets/cart-drawer.js"></script>
+</body>
+</html>
